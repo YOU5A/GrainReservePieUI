@@ -1,0 +1,198 @@
+##注释可以以'##'开头添加到有效行的任意位置
+##
+##请注意，尾随空格将不会被修剪。 如果要在字符串末尾和a的开头之间留出空间
+##在同一行上注释，使用TAB。
+
+rainbowpie.ui.global.title=Grain Reserve Pie UI
+
+rainbowpie.ui.theme.default_name=Grain Reserve Pie UI 默认主题
+rainbowpie.ui.theme.default_auther=YOUSA
+rainbowpie.ui.theme.default_description=Grain Reserve Pie UI
+
+rainbowpie.ui.themesystem.background.title=背景信息
+rainbowpie.ui.themesystem.background.name=名称：
+rainbowpie.ui.themesystem.background.description=简介：
+
+rainbowpie.ui.themesystem.description.title=简介:	#
+rainbowpie.ui.themesystem.version_toolow=当前主题版本太低！请更新！	#
+rainbowpie.ui.themesystem.version_toohight=当前主题版本太高！	#
+
+rainbowpie.ui.start.vanilla_tip=遇到 Bug 了吗？如果你遇到了 Bug 请通过 "邮箱" 反馈给我们！
+rainbowpie.ui.start.startui_tip=回到 Grain Reserve Pie UI 样式的 StartUI
+rainbowpie.ui.start.vanilla=原版
+rainbowpie.ui.start.startui=StartUI
+
+rainbowpie.ui.trade2.tradeAll=交易全部
+
+rainbowpie.ui.inventory.actions.destroy_selection=销毁物品
+rainbowpie.ui.inventory.actions.destroy_inventory=销毁物品栏内全部物品
+rainbowpie.ui.inventory.actions.quick_craft=快速合成
+rainbowpie.ui.inventory.actions.drop_selection=丟出
+rainbowpie.ui.inventory.actions.drop_inventory=丟出物品栏内全部物品
+
+rainbowpie.ui.inventory.durability=耐久度:
+
+rainbowpie.ui.chest.fastpick.dropall=丟出箱子内全部物品
+rainbowpie.ui.chest.fastpick.pickall=拿取箱子内全部物品
+rainbowpie.ui.chest.fastpick.putall=放入物品栏内全部物品
+
+rainbowpie.ui.screenshot.screenshotPathButton=图片路径
+rainbowpie.ui.screenshot.screenshotPathTitle=截图已经保存到：
+
+rainbowpie.ui.settings.raytracing.title=光线追踪设置
+
+rainbowpie.ui.settings.theme.title=主题
+rainbowpie.ui.settings.module.title=模块
+
+rainbowpie.ui.storage_management.tab.management=存储管理
+rainbowpie.ui.storage_management.tab.settings=存储设置
+
+rainbowpie.ui.manifest_validation.verifiedPack=已验证的包：
+rainbowpie.ui.manifest_validation.verifiedDetail=更多信息
+rainbowpie.ui.manifest_validation.verifiedDetail.title=验证信息
+rainbowpie.ui.manifest_validation.verifiedDetail.warn=此验证信息可能会被第三方包添加或修改，请仅做参考
+rainbowpie.ui.manifest_validation.verifiedDetail.description=由验证者提供的信息：
+
+rainbowpie.ui.music.button=音乐
+rainbowpie.ui.music.title=音乐播放器
+rainbowpie.ui.music.button.seeAll=查看全部
+rainbowpie.ui.music.section.home=主页
+rainbowpie.ui.music.section.record=音乐唱片
+rainbowpie.ui.music.category.single=Minecraft音乐
+
+rainbowpie.ui.book.tab.title=书名
+rainbowpie.ui.book.tab.auther=作者
+
+rainbowpie.ui.chat.tab.chat=聊天消息
+rainbowpie.ui.chat.tab.playerlist=玩家列表
+
+rainbowpie.ui.resource_packs.tab.selected_packs=已选择
+rainbowpie.ui.resource_packs.tab.available_packs=可用的
+rainbowpie.ui.resource_packs.search.placeholder.resource=搜索资源包
+rainbowpie.ui.resource_packs.search.placeholder.behavior=搜索行为包
+rainbowpie.ui.resource_packs.tag.module=[模块]
+rainbowpie.ui.resource_packs.tag.package=[Package]
+rainbowpie.ui.resource_packs.tag.theme=[主题]
+
+rainbowpie.ui.toast.gamepad_connected=控制器已连接！
+
+rainbowpie.ui.pause.tab.pause=暂停游戏
+rainbowpie.ui.pause.tab.playerlist=玩家列表
+rainbowpie.ui.pause.tab.scoreboard=计分板
+rainbowpie.ui.pause.tab.persona=我的档案
+rainbowpie.ui.pause.title.unscored_players=未得分玩家
+rainbowpie.ui.pause.quit.tiptext=双击退出按钮即可保存并退出
+
+rainbowpie.ui.pause.permissions.custom=自定义
+rainbowpie.ui.pause.permissions.member=成员
+rainbowpie.ui.pause.permissions.op=操作员
+rainbowpie.ui.pause.permissions.visitor=访客
+
+rainbowpie.ui.pause.vanilla_tip=切换到原版样式的 PauseUI
+rainbowpie.ui.pause.pauseui_tip=回到 Grain Reserve Pie UI 样式的 PauseUI
+rainbowpie.ui.pause.vanilla=原版
+rainbowpie.ui.pause.pauseui=PauseUI
+
+rainbowpie.ui.warning.text.error=检查到一个致命的错误，这可能影响到你正常使用。如果你没有使用其他资源包并且正在使用受支持的游戏版本，请把此错误报告到issues。
+rainbowpie.ui.warning.text.warning=检查到一个错误。如果你没有使用其他资源包并且正在使用受支持的游戏版本，请把此错误报告到issues。
+rainbowpie.ui.warning.button.check=查看报错
+rainbowpie.ui.warning.button.deactivate=禁用资源包
+
+rainbowpie.ui.version.warn=版本警告！
+rainbowpie.ui.version.supported=支持的版本：
+rainbowpie.ui.version.warn_unsupport=使用不支持的版本可能出现崩溃或界面错误等问题
+rainbowpie.ui.version.dev.err_variable=[开发者注意]请检查配置文件中的版本是否配置正确！
+
+rainbowpie.ui.hud.tablist.maxplayers=这里只能显示22个玩家！去暂停界面查看全部玩家
+rainbowpie.ui.hud.tablist.player_count=名玩家
+rainbowpie.ui.hud.tablist.player_count.single=名玩家
+rainbowpie.ui.hud.tablist.playertag.self=[我]
+rainbowpie.ui.hud.tablist.playertag.offline=[离线账户]
+rainbowpie.ui.hud.clickspace.tiptext=点击这个区域来显示HUD
+
+rainbowpie.ui.verify.title=你需要验证来使用此版本的GrainReservePie
+rainbowpie.ui.verify.text=如果你不知道密码是什么，请前往内测群询问。
+rainbowpie.ui.verify.password_placeholder=在此键入密码
+
+rainbowpie.ui.dialog.title_default=注意
+
+#  __   __   ___    _   _   ____       _    
+#  \ \ / /  / _ \  | | | | / ___|     / \   
+#   \ V /  | | | | | | | | \___ \    / _ \  
+#    | |   | |_| | | |_| |  ___) |  / ___ \ 
+#    |_|    \___/   \___/  |____/  /_/   \_\
+#                                           
+
+tile.wool.black.name=§0Black Wool
+tile.wool.red.name=§4Red Wool
+tile.wool.green.name=§2Green Wool
+tile.wool.brown.name=§6Brown Wool
+tile.wool.blue.name=§1Blue Wool
+tile.wool.purple.name=§5Purple Wool
+tile.wool.cyan.name=§3Cyan Wool
+tile.wool.silver.name=§7Light Gray Wool
+tile.wool.gray.name=§8Gray Wool
+tile.wool.pink.name=§dPink Wool
+tile.wool.lime.name=§aLime Wool
+tile.wool.yellow.name=§eYellow Wool
+tile.wool.lightBlue.name=§bLight Blue Wool
+tile.wool.magenta.name=§dMagenta Wool
+tile.wool.orange.name=§6Orange Wool
+tile.wool.white.name=Wool
+
+item.diamond_sword.name=§bDiamond Sword
+item.golden_sword.name=§eGold Sword
+item.iron_sword.name=Iron Sword
+item.stone_sword.name=§8Stone Sword
+item.wooden_sword.name=§6Wood Sword
+
+hostOption.setWorldSpawn=Set World Rebirth Point
+hostOption.teleport=TP
+hostOption.teleport.who=Who?
+hostOption.teleport.where=Where?
+hostOption.time=Time
+hostOption.time.day=Day
+hostOption.time.midnight=Midnight
+hostOption.time.noon=Noon
+hostOption.time.night=Night
+hostOption.time.sunrise=Sunrise
+hostOption.time.sunset=Sunset
+hostOption.weather=Weather
+hostOption.weather.clear=Clear
+hostOption.weather.rain=Rain
+hostOption.weather.thunderstorm=Thunderstorm
+
+map.position=X: %s, Y: %s, Z: %s
+test.version.text=测试版本，不代表最终品质!
+options.pack_info=Grain Reserve Pie信息
+
+#Button text
+hide.title.text=标题
+hide.chat.text=聊天栏
+display.filigrane.text=水印
+hide.scross.icon=更多准心
+look.scoreboard.hide=计分板
+is.Hanabi.Extend=拓展显示
+compass.and.clock=指南针 钟
+keystrokes.ds=按键显示
+direction.ds=方向显示
+inventory.text=背包显示
+info.switch.text=详细信息
+held.display.armor=盔甲显示
+text.items.durability=武器耐久
+text.items.block=方块剩余
+
+mask.rgb.text=彩色
+mask.switch.text=滤镜遮罩
+mod.switch.text=拓展模组
+hud.switch.text=屏幕设置
+welcome.mod.text=Mod点击下方
+
+#tip
+pack.tips.game.1=Qixi
+pack.tips.game.2=PFMAXLNX
+pack.tips.game.3=Yousa
+pack.tips.game.4=MintRaspberry Cool
+pack.tips.game.5=HanaMaki
+
+## end

@@ -1,0 +1,28 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:fog_settings": {
+    "description": {
+      "identifier": "nofog:fog_basalt_deltas"
+    },
+    "distance": {
+      "air": {
+        "fog_start": 2,
+        "fog_end": 2,
+        "fog_color": "#685f70",
+        "render_distance_type": "render"
+      },
+      "water": {
+        "fog_start": 2,
+        "fog_end": 2,
+        "fog_color": "#423e42",
+        "render_distance_type": "render"
+      },
+      "weather": {
+        "fog_start": 2,
+        "fog_end": 2,
+        "fog_color": "#685f70",
+        "render_distance_type": "render"
+      }
+    }
+  }
+}

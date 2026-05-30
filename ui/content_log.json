@@ -1,0 +1,34 @@
+{
+  "namespace": "content_log",
+
+  "content_log_panel/stack_panel": {
+    "factory": {
+      "name": "content_log_item_factory",
+      "max_children_size": 50,
+      "control_ids": {
+        "content_log_item": "content_log_item@content_log.content_log_grid_item"
+      },
+      "factory_variables": [
+        "$rainbowpie_ui_theme_global_font_name",
+        "$rainbowpie_ui_theme_global_font_backup_name"
+      ]
+    }
+  },
+
+  "content_log_label": {
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+  },
+
+  "anim_content_log_bg_alpha": {
+    "from": 0.3
+  },
+
+  "content_log_grid_item/content_log_background": {
+    "alpha": 0.3,
+    "anims": [
+      "@content_log.anim_content_log_bg_wait",
+      "@rainbowpieui_content_log.anim_content_log_offset"
+    ]
+  }
+}

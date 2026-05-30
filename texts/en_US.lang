@@ -1,0 +1,198 @@
+## Comments can be added anywhere on a valid line by starting with '##'
+##
+## Note, trailing spaces will NOT be trimmed. If you want room between the end of the string and the start of a
+## comment on the same line, use TABs.
+
+rainbowpie.ui.global.title=Grain Reserve Pie UI
+
+rainbowpie.ui.theme.default_name=Grain Reserve Pie UI Default Theme
+rainbowpie.ui.theme.default_auther=YOUSA
+rainbowpie.ui.theme.default_description=Grain Reserve Pie UI
+
+rainbowpie.ui.themesystem.background.title=Information
+rainbowpie.ui.themesystem.background.name=Name:
+rainbowpie.ui.themesystem.background.description=Description:
+
+rainbowpie.ui.themesystem.description.title=Description:
+rainbowpie.ui.themesystem.version_toolow=This theme version is too low! please update!
+rainbowpie.ui.themesystem.version_toohight=This theme version is too hight!
+
+rainbowpie.ui.start.vanilla_tip=Have you encountered a BUG? If you encounter a bug, please report it to us via gmail
+rainbowpie.ui.start.startui_tip=Back to Grain Reserve Pie UI style StartUI
+rainbowpie.ui.start.vanilla=Vanilla
+rainbowpie.ui.start.startui=StartUI
+
+rainbowpie.ui.trade2.tradeAll=Trade All
+
+rainbowpie.ui.inventory.actions.destroy_selection=Destroy
+rainbowpie.ui.inventory.actions.destroy_inventory=Destroy all items from inventory
+rainbowpie.ui.inventory.actions.quick_craft=Quick Craft
+rainbowpie.ui.inventory.actions.drop_selection=Drop
+rainbowpie.ui.inventory.actions.drop_inventory=Drop all items from inventory
+
+rainbowpie.ui.inventory.durability=Durability:
+
+rainbowpie.ui.chest.fastpick.dropall=Drop all items from this chest
+rainbowpie.ui.chest.fastpick.pickall=Pick all items from this chest
+rainbowpie.ui.chest.fastpick.putall=Place all items from the inventory intro this chest 
+
+rainbowpie.ui.screenshot.screenshotPathButton=IMAGE PATH
+rainbowpie.ui.screenshot.screenshotPathTitle=The screenshot has been saved to:
+
+rainbowpie.ui.settings.raytracing.title=Ray Tracing Settings
+
+rainbowpie.ui.settings.theme.title=Theme
+rainbowpie.ui.settings.module.title=Module
+
+rainbowpie.ui.storage_management.tab.management=Management
+rainbowpie.ui.storage_management.tab.settings=Settings
+
+rainbowpie.ui.manifest_validation.verifiedPack=Verified Pack:
+rainbowpie.ui.manifest_validation.verifiedDetail=Detail
+rainbowpie.ui.manifest_validation.verifiedDetail.title=Verified Pack
+rainbowpie.ui.manifest_validation.verifiedDetail.warn=This information may be modified by third-party packs, so please use it as a reference only
+rainbowpie.ui.manifest_validation.verifiedDetail.description=Information provided by the verifier:
+
+rainbowpie.ui.music.button=Music
+rainbowpie.ui.music.title=Music Player
+rainbowpie.ui.music.button.seeAll=See All
+rainbowpie.ui.music.section.home=Home
+rainbowpie.ui.music.section.record=Music Disc
+rainbowpie.ui.music.category.single=Minecraft Music
+
+rainbowpie.ui.book.tab.title=Book Title
+rainbowpie.ui.book.tab.auther=Auther
+
+rainbowpie.ui.chat.tab.chat=Messages
+rainbowpie.ui.chat.tab.playerlist=Players
+
+rainbowpie.ui.resource_packs.tab.selected_packs=Selected
+rainbowpie.ui.resource_packs.tab.available_packs=Available
+rainbowpie.ui.resource_packs.search.placeholder.resource=Search resource packs
+rainbowpie.ui.resource_packs.search.placeholder.behavior=Search behavior packs
+rainbowpie.ui.resource_packs.tag.module=[Module]
+rainbowpie.ui.resource_packs.tag.package=[Package]
+rainbowpie.ui.resource_packs.tag.theme=[Theme]
+
+rainbowpie.ui.toast.gamepad_connected=Controller connected!
+
+rainbowpie.ui.pause.tab.pause=Pause
+rainbowpie.ui.pause.tab.playerlist=Players
+rainbowpie.ui.pause.tab.scoreboard=Score
+rainbowpie.ui.pause.tab.persona=My Profile
+rainbowpie.ui.pause.title.unscored_players=Unscored players
+rainbowpie.ui.pause.quit.tiptext=Double click to Save & Quit
+
+rainbowpie.ui.pause.permissions.custom=Custom
+rainbowpie.ui.pause.permissions.member=Member
+rainbowpie.ui.pause.permissions.op=Operator
+rainbowpie.ui.pause.permissions.visitor=Visitor
+
+rainbowpie.ui.pause.vanilla_tip=Switch to Vanilla style PauseUI
+rainbowpie.ui.pause.pauseui_tip=Back to Grain Reserve Pie UI style PauseUI
+rainbowpie.ui.pause.vanilla=Vanilla
+rainbowpie.ui.pause.pauseui=PauseUI
+
+rainbowpie.ui.warning.text.error=A serious error has been detected, which may affect your normal use. If you are not using any other resource packs and are using a supported game version, please report this error to issues.
+rainbowpie.ui.warning.text.warning=An error has been detected. If you are not using any other resource packs and are using a supported game version, please report this error to issues.
+rainbowpie.ui.warning.button.check=Check error
+rainbowpie.ui.warning.button.deactivate=Deactivate Pack
+
+rainbowpie.ui.version.warn=Warning!
+rainbowpie.ui.version.supported=Supported Versions:
+rainbowpie.ui.version.warn_unsupport=This version may have bugs or problems
+rainbowpie.ui.version.dev.err_variable=[ForDEV]Please check variables about version!
+
+rainbowpie.ui.hud.tablist.maxplayers=Only 22 players can be shown here!
+rainbowpie.ui.hud.tablist.player_count=PLAYERS
+rainbowpie.ui.hud.tablist.player_count.single=PLAYER
+rainbowpie.ui.hud.tablist.playertag.self=[ME]
+rainbowpie.ui.hud.tablist.playertag.offline=[OFFLINE]
+rainbowpie.ui.hud.clickspace.tiptext=Click this space to show HUD
+
+rainbowpie.ui.verify.title=You need to authenticate to use this version of GrainReservePie
+rainbowpie.ui.verify.text=If you don't know the password, Please don't use this version.
+rainbowpie.ui.verify.password_placeholder=Enter password here
+
+rainbowpie.ui.dialog.title_default=Alert
+
+#  __   __   ___    _   _   ____       _    
+#  \ \ / /  / _ \  | | | | / ___|     / \   
+#   \ V /  | | | | | | | | \___ \    / _ \  
+#    | |   | |_| | | |_| |  ___) |  / ___ \ 
+#    |_|    \___/   \___/  |____/  /_/   \_\
+#                                           
+
+tile.wool.black.name=§0Black Wool
+tile.wool.red.name=§4Red Wool
+tile.wool.green.name=§2Green Wool
+tile.wool.brown.name=§6Brown Wool
+tile.wool.blue.name=§1Blue Wool
+tile.wool.purple.name=§5Purple Wool
+tile.wool.cyan.name=§3Cyan Wool
+tile.wool.silver.name=§7Light Gray Wool
+tile.wool.gray.name=§8Gray Wool
+tile.wool.pink.name=§dPink Wool
+tile.wool.lime.name=§aLime Wool
+tile.wool.yellow.name=§eYellow Wool
+tile.wool.lightBlue.name=§bLight Blue Wool
+tile.wool.magenta.name=§dMagenta Wool
+tile.wool.orange.name=§6Orange Wool
+tile.wool.white.name=Wool
+
+item.diamond_sword.name=§bDiamond Sword
+item.golden_sword.name=§eGold Sword
+item.iron_sword.name=Iron Sword
+item.stone_sword.name=§8Stone Sword
+item.wooden_sword.name=§6Wood Sword
+
+hostOption.setWorldSpawn=Set World Rebirth Point
+hostOption.teleport=TP
+hostOption.teleport.who=Who?
+hostOption.teleport.where=Where?
+hostOption.time=Time
+hostOption.time.day=Day
+hostOption.time.midnight=Midnight
+hostOption.time.noon=Noon
+hostOption.time.night=Night
+hostOption.time.sunrise=Sunrise
+hostOption.time.sunset=Sunset
+hostOption.weather=Weather
+hostOption.weather.clear=Clear
+hostOption.weather.rain=Rain
+hostOption.weather.thunderstorm=Thunderstorm
+
+map.position=X: %s, Y: %s, Z: %s
+test.version.text=Beta version!
+options.pack_info=Grain Reserve Pie Info
+
+#Button text
+hide.title.text=Titles
+hide.chat.text=Chat bar
+display.filigrane.text=Watermarks
+hide.scross.icon=Centering
+look.scoreboard.hide=Scoreboard
+is.Hanabi.Extend=More Display
+compass.and.clock=Compass clock
+keystrokes.ds=Keypad Display
+direction.ds=Directional display
+inventory.text=Backpack display
+info.switch.text=Detailed Info
+held.display.armor=Armour display
+text.items.durability=Weapons durability
+text.items.block=Remaining Block
+
+mask.rgb.text=Color
+mask.switch.text=Filter Mask
+mod.switch.text=Other Modules
+hud.switch.text=Screen set
+welcome.mod.text=ModClick below
+
+#tip
+pack.tips.game.1=Qixi
+pack.tips.game.2=PFMAXLNX
+pack.tips.game.3=Yousa
+pack.tips.game.4=MintRaspberry Cool
+pack.tips.game.5=HanaMaki
+
+## end

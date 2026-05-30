@@ -1,0 +1,401 @@
+{
+ "format_version": "1.10.0",
+ "animation_controllers": {
+  "controller.animation.t_pr_root": {
+   "states": {
+    "default": {
+     "blend_transition": 0,
+     "transitions": [
+      {"1": "1.0"}
+     ]
+    },
+    "1": {
+     "animations": [
+      "c_t_pr_ui",
+      "c_t_pr_jump_blend",
+      "c_t_pr_lmb_blend",
+      "c_t_pr_rmb_blend",
+      "c_t_pr_w_blend",
+      "c_t_pr_a_blend",
+      "c_t_pr_s_blend",
+      "c_t_pr_d_blend",
+      "c_t_pr_jump_dynamic",
+      "c_t_pr_lmb_dynamic",
+      "c_t_pr_rmb_dynamic",
+      "c_t_pr_p_dynamic",
+      "c_t_pr_w_dynamic",
+      "c_t_pr_a_dynamic",
+      "c_t_pr_s_dynamic",
+      "c_t_pr_d_dynamic"
+     ],
+     "blend_transition": 0,
+     "transitions": [
+      {"default": "0.0"}
+     ]
+    }
+   }
+  },
+  "controller.animation.t_pr_ui": {
+   "states": {
+    "default": {
+     "blend_transition": 0,
+     "transitions": [
+      {"1": "1.0"}
+     ]
+    },
+    "1": {
+     "animations": [
+      "a_t_pr_ui",
+      "a_t_pr_ui_rotation"
+     ],
+     "blend_transition": 0,
+     "transitions": [
+      {"default": "0.0"}
+     ]
+    }
+   }
+  },
+  "controller.animation.t_pr_jump_blend": {
+   "states": {
+    "default": {
+     "blend_transition": 0.0,
+     "transitions": [
+      {"1": "1.0"}
+     ],
+     "on_entry": [
+      "v.jump_blend = (q.is_jumping == 1.0 ? Math.min((v.jump_blend + v.jump_blend_time_enter), 1) : Math.max((v.jump_blend - v.jump_blend_time_appear), 0));"
+     ]
+    },
+    "1": {
+     "animations": [
+      "a_t_pr_empty"
+     ],
+     "blend_transition": 0.0,
+     "transitions": [
+      {"default": "1.0"}
+     ],
+     "on_entry": [
+      "v.jump_blend = (q.is_jumping == 1.0 ? Math.min((v.jump_blend + v.jump_blend_time_enter), 1) : Math.max((v.jump_blend - v.jump_blend_time_appear), 0));"
+     ]
+    }
+   }
+  },
+  "controller.animation.t_pr_lmb_blend": {
+   "states": {
+    "default": {
+     "blend_transition": 0.0,
+     "transitions": [
+      {"1": "1.0"}
+     ],
+     "on_entry": [
+      "v.lmb_blend = (variable.attack_time && !v.rmb_block_all ? Math.min((v.lmb_blend + v.lmb_blend_time_enter), 1) : Math.max((v.lmb_blend - v.lmb_blend_time_appear), 0));",
+      "v.lmb_blend_mix = (variable.attack_time && !v.rmb_block_all ? Math.min((v.lmb_blend_mix + v.lmb_mix_blend_time_enter), variable.attack_time * 1) : Math.max((v.lmb_blend_mix - v.lmb_mix_blend_time_appear), 0));"
+     ]
+    },
+    "1": {
+     "animations": [
+      "a_t_pr_empty"
+     ],
+     "blend_transition": 0.0,
+     "transitions": [
+      {"default": "1.0"}
+     ],
+     "on_entry": [
+      "v.lmb_blend = (variable.attack_time && !v.rmb_block_all ? Math.min((v.lmb_blend + v.lmb_blend_time_enter), 1) : Math.max((v.lmb_blend - v.lmb_blend_time_appear), 0));",
+      "v.lmb_blend_mix = (variable.attack_time && !v.rmb_block_all ? Math.min((v.lmb_blend_mix + v.lmb_mix_blend_time_enter), variable.attack_time * 1) : Math.max((v.lmb_blend_mix - v.lmb_mix_blend_time_appear), 0));"
+     ]
+    }
+   }
+  },
+  "controller.animation.t_pr_rmb_blend": {
+   "states": {
+    "default": {
+     "blend_transition": 0.0,
+     "transitions": [
+      {"1": "1.0"}
+     ],
+     "on_entry": [
+      "v.rmb_blend = ((query.is_using_item && query.get_equipped_item_name(0, 1) != 'fishing_rod') || (v.rmb_block_all && variable.attack_time) ? Math.min((v.rmb_blend + v.rmb_blend_time_enter), 1) : Math.max((v.rmb_blend - v.rmb_blend_time_appear), 0));",
+      "v.rmb_blend_mix_block = ((query.is_using_item && query.get_equipped_item_name(0, 1) != 'fishing_rod') || (v.rmb_block_all && variable.attack_time) ? Math.min((v.rmb_blend_mix_block + v.lmb_mix_blend_time_enter), query.is_using_item ? 1 : variable.attack_time * 1) : Math.max((v.rmb_blend_mix_block - v.lmb_mix_blend_time_appear), 0));"
+     ]
+    },
+    "1": {
+     "animations": [
+      "a_t_pr_empty"
+     ],
+     "blend_transition": 0.0,
+     "transitions": [
+      {"default": "1.0"}
+     ],
+     "on_entry": [
+      "v.rmb_blend = ((query.is_using_item && query.get_equipped_item_name(0, 1) != 'fishing_rod') || (v.rmb_block_all && variable.attack_time) ? Math.min((v.rmb_blend + v.rmb_blend_time_enter), 1) : Math.max((v.rmb_blend - v.rmb_blend_time_appear), 0));",
+      "v.rmb_blend_mix_block = ((query.is_using_item && query.get_equipped_item_name(0, 1) != 'fishing_rod') || (v.rmb_block_all && variable.attack_time) ? Math.min((v.rmb_blend_mix_block + v.lmb_mix_blend_time_enter), query.is_using_item ? 1 : variable.attack_time * 1) : Math.max((v.rmb_blend_mix_block - v.lmb_mix_blend_time_appear), 0));"
+     ]
+    }
+   }
+  },
+  "controller.animation.t_pr_w_blend": {
+   "states": {
+    "default": {
+     "blend_transition": 0.0,
+     "transitions": [
+      {"1": "1.0"}
+     ],
+     "on_entry": [
+      "v.w_blend = (v.t_pr_w ? Math.min((v.w_blend + v.wasd_blend_time_enter), 1) : Math.max((v.w_blend - v.wasd_blend_time_appear), 0));"
+     ]
+    },
+    "1": {
+     "animations": [
+      "a_t_pr_empty"
+     ],
+     "blend_transition": 0.0,
+     "transitions": [
+      {"default": "1.0"}
+     ],
+     "on_entry": [
+      "v.w_blend = (v.t_pr_w ? Math.min((v.w_blend + v.wasd_blend_time_enter), 1) : Math.max((v.w_blend - v.wasd_blend_time_appear), 0));"
+     ]
+    }
+   }
+  },
+  "controller.animation.t_pr_a_blend": {
+   "states": {
+    "default": {
+     "blend_transition": 0.0,
+     "transitions": [
+      {"1": "1.0"}
+     ],
+     "on_entry": [
+      "v.a_blend = (v.t_pr_a ? Math.min((v.a_blend + v.wasd_blend_time_enter), 1) : Math.max((v.a_blend - v.wasd_blend_time_appear), 0));"
+     ]
+    },
+    "1": {
+     "animations": [
+      "a_t_pr_empty"
+     ],
+     "blend_transition": 0.0,
+     "transitions": [
+      {"default": "1.0"}
+     ],
+     "on_entry": [
+      "v.a_blend = (v.t_pr_a ? Math.min((v.a_blend + v.wasd_blend_time_enter), 1) : Math.max((v.a_blend - v.wasd_blend_time_appear), 0));"
+     ]
+    }
+   }
+  },
+  "controller.animation.t_pr_s_blend": {
+   "states": {
+    "default": {
+     "blend_transition": 0.0,
+     "transitions": [
+      {"1": "1.0"}
+     ],
+     "on_entry": [
+      "v.s_blend = (v.t_pr_s ? Math.min((v.s_blend + v.wasd_blend_time_enter), 1) : Math.max((v.s_blend - v.wasd_blend_time_appear), 0));"
+     ]
+    },
+    "1": {
+     "animations": [
+      "a_t_pr_empty"
+     ],
+     "blend_transition": 0.0,
+     "transitions": [
+      {"default": "1.0"}
+     ],
+     "on_entry": [
+      "v.s_blend = (v.t_pr_s ? Math.min((v.s_blend + v.wasd_blend_time_enter), 1) : Math.max((v.s_blend - v.wasd_blend_time_appear), 0));"
+     ]
+    }
+   }
+  },
+  "controller.animation.t_pr_d_blend": {
+   "states": {
+    "default": {
+     "blend_transition": 0.0,
+     "transitions": [
+      {"1": "1.0"}
+     ],
+     "on_entry": [
+      "v.d_blend = (v.t_pr_d ? Math.min((v.d_blend + v.wasd_blend_time_enter), 1) : Math.max((v.d_blend - v.wasd_blend_time_appear), 0));"
+     ]
+    },
+    "1": {
+     "animations": [
+      "a_t_pr_empty"
+     ],
+     "blend_transition": 0.0,
+     "transitions": [
+      {"default": "1.0"}
+     ],
+     "on_entry": [
+      "v.d_blend = (v.t_pr_d ? Math.min((v.d_blend + v.wasd_blend_time_enter), 1) : Math.max((v.d_blend - v.wasd_blend_time_appear), 0));"
+     ]
+    }
+   }
+  },
+  "controller.animation.t_pr_jump_dynamic": {
+   "states": {
+    "default": {
+     "blend_transition": 0.01,
+     "transitions": [
+      {"1": "q.is_jumping && variable.jump != 1.0"},
+      {"2": "q.is_jumping && variable.jump == 1.0"}
+     ]
+    },
+    "1": {
+     "animations": [
+      "a_t_pr_jump_dynamic"
+     ],
+     "blend_transition": 0.01,
+     "transitions": [
+      {"default": "!q.is_jumping && variable.jump != 1.0"}
+     ]
+    },
+    "2": {
+     "animations": [
+      "a_t_pr_jump_dynamic",
+      "a_t_pr_empty"
+     ],
+     "blend_transition": 0.01,
+     "transitions": [
+      {"default": "(!q.is_jumping || query.any_animation_finished) && variable.jump == 1.0"}
+     ]
+    }
+   }
+  },
+  "controller.animation.t_pr_lmb_dynamic": {
+   "states": {
+    "default": {
+     "blend_transition": 0.02,
+     "transitions": [
+      {"1": "variable.attack_time && !v.rmb_block_all"}
+     ]
+    },
+    "1": {
+     "animations": [
+      "a_t_pr_lmb_dynamic"
+     ],
+     "blend_transition": 0.02,
+     "transitions": [
+      {"default": "!variable.attack_time || v.rmb_block_all"}
+     ]
+    }
+   }
+  },
+  "controller.animation.t_pr_rmb_dynamic": {
+   "states": {
+    "default": {
+     "blend_transition": 0.01,
+     "transitions": [
+      {"1": "(query.is_using_item && query.get_equipped_item_name(0, 1) != 'fishing_rod') || (v.rmb_block_all && variable.attack_time)"}
+     ]
+    },
+    "1": {
+     "animations": [
+      "a_t_pr_rmb_dynamic"
+     ],
+     "blend_transition": 0.01,
+     "transitions": [
+      {"default": "(!query.is_using_item || query.get_equipped_item_name(0, 1) == 'fishing_rod') && (!v.rmb_block_all || !variable.attack_time)"}
+     ]
+    }
+   }
+  },
+  "controller.animation.t_pr_p_dynamic": {
+   "states": {
+    "default": {
+     "blend_transition": 0.01,
+     "transitions": [
+      {"1": "query.is_using_item && query.get_equipped_item_name(0, 1) != 'fishing_rod'"}
+     ]
+    },
+    "1": {
+     "animations": [
+      "a_t_pr_p_dynamic"
+     ],
+     "blend_transition": 0.1,
+     "transitions": [
+      {"default": "!query.is_using_item || query.get_equipped_item_name(0, 1) == 'fishing_rod'"}
+     ]
+    }
+   }
+  },
+  "controller.animation.t_pr_w_dynamic": {
+   "states": {
+    "default": {
+     "blend_transition": 0.01,
+     "transitions": [
+      {"1": "v.t_pr_w"}
+     ]
+    },
+    "1": {
+     "animations": [
+      "a_t_pr_w_dynamic"
+     ],
+     "blend_transition": 0.05,
+     "transitions": [
+      {"default": "!v.t_pr_w"}
+     ]
+    }
+   }
+  },
+  "controller.animation.t_pr_a_dynamic": {
+   "states": {
+    "default": {
+     "blend_transition": 0.01,
+     "transitions": [
+      {"1": "v.t_pr_a"}
+     ]
+    },
+    "1": {
+     "animations": [
+      "a_t_pr_a_dynamic"
+     ],
+     "blend_transition": 0.05,
+     "transitions": [
+      {"default": "!v.t_pr_a"}
+     ]
+    }
+   }
+  },
+  "controller.animation.t_pr_s_dynamic": {
+   "states": {
+    "default": {
+     "blend_transition": 0.01,
+     "transitions": [
+      {"1": "v.t_pr_s"}
+     ]
+    },
+    "1": {
+     "animations": [
+      "a_t_pr_s_dynamic"
+     ],
+     "blend_transition": 0.05,
+     "transitions": [
+      {"default": "!v.t_pr_s"}
+     ]
+    }
+   }
+  },
+  "controller.animation.t_pr_d_dynamic": {
+   "states": {
+    "default": {
+     "blend_transition": 0.01,
+     "transitions": [
+      {"1": "v.t_pr_d"}
+     ]
+    },
+    "1": {
+     "animations": [
+      "a_t_pr_d_dynamic"
+     ],
+     "blend_transition": 0.05,
+     "transitions": [
+      {"default": "!v.t_pr_d"}
+     ]
+    }
+   }
+  }
+ }
+}

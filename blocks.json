@@ -1,0 +1,27 @@
+{
+  "format_version": [ 1, 1, 0 ],
+
+  "frame": {
+    "blockshape": "invisible",
+    "textures": "itemframe_background",
+    "sound": "itemframe"
+  },
+  "crimson_nylium": {
+    "isotropic": true
+  },
+  "grass": {
+    "isotropic": true
+  },
+  "grass_path": {
+    "isotropic": true
+  },
+  "mycelium": {
+    "isotropic": true
+  },
+  "podzol": {
+    "isotropic": true
+  },
+  "warped_nylium": {
+    "isotropic": true
+  }
+}

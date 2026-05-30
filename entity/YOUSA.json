@@ -1,0 +1,329 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:player",
+      "materials": {
+        "default": "entity_alphatest",
+        "cape": "entity_alphatest",
+        "animated": "player_animated",
+        "direction_hud": "direction_hud",
+        "entity_alphablend": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/steve",
+        "cape": "textures/entity/cape_invisible",
+
+        "key_pressed": "textures/entity/metro/key_pressed",
+        "key_default": "textures/entity/metro/key_default",
+        "direction_hud": "textures/entity/direction/direction_hud",
+
+        "leather_helmet": "textures/entity/armor/leather_helmet",
+        "leather_chestplate": "textures/entity/armor/leather_chestplate",
+        "leather_leggings": "textures/entity/armor/leather_leggings",
+        "leather_boots": "textures/entity/armor/leather_boots",
+        "elytra": "textures/items/elytra",
+        "turtle_helmet": "textures/items/turtle_helmet",
+        "chainmail_helmet": "textures/items/chainmail_helmet",
+        "chainmail_chestplate": "textures/items/chainmail_chestplate",
+        "chainmail_leggings": "textures/items/chainmail_leggings",
+        "chainmail_boots": "textures/items/chainmail_boots",
+        "diamond_helmet": "textures/items/diamond_helmet",
+        "diamond_chestplate": "textures/items/diamond_chestplate",
+        "diamond_leggings": "textures/items/diamond_leggings",
+        "diamond_boots": "textures/items/diamond_boots",
+        "gold_helmet": "textures/items/gold_helmet",
+        "gold_chestplate": "textures/items/gold_chestplate",
+        "gold_leggings": "textures/items/gold_leggings",
+        "gold_boots": "textures/items/gold_boots",
+        "iron_helmet": "textures/items/iron_helmet",
+        "iron_chestplate": "textures/items/iron_chestplate",
+        "iron_leggings": "textures/items/iron_leggings",
+        "iron_boots": "textures/items/iron_boots",
+        "netherite_helmet": "textures/items/netherite_helmet",
+        "netherite_chestplate": "textures/items/netherite_chestplate",
+        "netherite_leggings": "textures/items/netherite_leggings",
+        "netherite_boots": "textures/items/netherite_boots"
+      },
+      "geometry": {
+        "default": "geometry.humanoid.custom",
+        "cape": "geometry.cape",
+
+        "direction_hud": "geometry.direction_hud",
+        "damage_particle": "geometry.damage_particle",
+
+        "helmet_rend": "geometry.helmet_rend",
+        "chestplate_rend": "geometry.chestplate_rend",
+        "leggings_rend": "geometry.leggings_rend",
+        "boots_rend": "geometry.boots_rend",
+
+        "custom": "geometry.custom",
+        "space": "geometry.keystrokes_space",
+        "lmb": "geometry.keystrokes_lmb",
+        "rmb": "geometry.keystrokes_rmb",
+        "w": "geometry.keystrokes_w",
+        "a": "geometry.keystrokes_a",
+        "s": "geometry.keystrokes_s",
+        "d": "geometry.keystrokes_d",
+        "p": "geometry.keystrokes_p"
+      },
+      "scripts": {
+        "scale": "0.9375",
+        "initialize": [
+          "variable.is_holding_right = 0.0;",
+          "variable.is_blinking = 0.0;",
+          "variable.last_blink_time = 0.0;",
+          "variable.hand_bob = 0.0;",
+          "variable.render = 0.0;",
+
+          "variable.hurt_time = 0.0;",
+          "variable.previous_perspective = 0.0;",
+          "variable.perspective = 0.0;",
+          "variable.life_time = 0.0;",
+
+          "variable.enchanted_helmet = 0.0;",
+          "variable.enchanted_chestplate = 0.0;",
+          "variable.enchanted_leggings = 0.0;",
+          "variable.enchanted_boots = 0.0;",
+
+          "variable.t_pr_rotation = 0.0;",
+          "variable.t_pr_w = 0.0;",
+          "variable.t_pr_a = 0.0;",
+          "variable.t_pr_s = 0.0;",
+          "variable.t_pr_d = 0.0;",
+          "variable.jump_blend = 0.0;",
+          "variable.lmb_blend = 0.0;",
+          "variable.rmb_blend = 0.0;",
+          "variable.w_blend = 0.0;",
+          "variable.a_blend = 0.0;",
+          "variable.s_blend = 0.0;",
+          "variable.d_blend = 0.0;",
+          "variable.rmb_block_all = 0.0;",
+          "variable.lmb_blend_mix = 0.0;",
+          "variable.rmb_blend_mix_block = 0.0;",
+          //开关
+          "variable.win = 0.0;", // 0.0表示启用win版 1.0表示启用手机版(主要体现在动画以及过渡时长)
+     
+          "variable.wasd = 0.0;", //WASD AD按键滞留，0.0表示取消滞留，1.0表示开启滞留，默认0.0
+     
+          "variable.rmb_block = 1.0;", //rmb 特殊方块放置启用rmb，0.0表示关闭，1.0表示开启，默认0.0
+     
+          "variable.jump = 1.0;", //跳跃 按键连击动画，0.0表示连击时持续保持特定大小，1.0表示连击时随跳跃频率改变大小，默认1.0
+     
+          "variable.lmb = 1.0;", //lmb 按键连击动画，0.0表示连击时持续保持特定大小，1.0表示连击时随攻击频率改变大小，默认1.0
+     
+          "variable.lmb_mix_blend = 1.0;", //lmb 连击渐变，0.0表示连击时无渐变改变，1.0表示连击时渐变随攻击频率改变，默认1.0
+     
+          "variable.rmb_mix_blend_block = 1.0;", //rmb 连击渐变，0.0表示连击时无渐变改变，1.0表示连击时渐变随攻击频率改变，默认1.0
+     
+          //参数
+          "variable.blend_time_enter = variable.win ? 2.7 : 1.0;", //所有按键入场过度时长倍率 win版为1.0 手机版为2.7(跳跃有单独修改的部分)
+          "variable.blend_time_appear = variable.win ? 2.65 : 1.0;", //所有按键出场过度时长倍率 win版为1.0 手机版为2.65(跳跃有单独修改的部分)
+     
+          "variable.dynamic_size_enter = variable.win ? 0.83 : 1.0;", //所有按键入场动画大小倍率 win版为1.0 手机版为0.85
+          "variable.dynamic_size_appear = variable.win ? 1.0 : 1.0;", //所有按键出场动画大小倍率 win版为1.0 手机版为1.0
+     
+          "variable.dynamic_time_enter = variable.win ? 1.0 : 1.0;", //所有按键入场动画时间倍率 win版为1.0 手机版为1.0
+     
+          "variable.jump_blend_time_enter = variable.win ? v.blend_time_enter * 0.05 : v.blend_time_enter * 0.03;", //跳跃 渐变入场时间，默认为0.03s，数值越大，入场越快 (大于1无意义)
+          "variable.jump_blend_time_appear = variable.win ? v.blend_time_appear * 0.005 : v.blend_time_appear * 0.01;", //跳跃 渐变出场时间，默认为0.01s，数值越大，出场越快 (大于1无意义)
+     
+          "variable.lmb_blend_time_enter = v.blend_time_enter * 0.03;", //lmb 渐变入场时间，默认为0.03s，数值越大，入场越快 (大于1无意义)
+          "variable.lmb_blend_time_appear = v.blend_time_appear * 0.01;", //lmb 渐变出场时间，默认为0.01s，数值越大，出场越快 (大于1无意义)
+     
+          "variable.lmb_mix_blend_time_enter = v.blend_time_enter * 0.025;", //lmb 渐变随攻击频率改变 渐变入场时间，默认为0.01s，数值越大，入场越快 (大于1无意义)
+          "variable.lmb_mix_blend_time_appear = v.blend_time_appear * 0.015;", //lmb 渐变随攻击频率改变 渐变出场时间，默认为0.01s，数值越大，出场越快 (大于1无意义)
+     
+          "variable.rmb_blend_time_enter = v.blend_time_enter * 0.01;", //rmb 渐变入场时间，默认为0.01s，数值越大，入场越快 (大于1无意义)
+          "variable.rmb_blend_time_appear = v.blend_time_appear * 0.01;", //rmb 渐变出场时间，默认为0.01s，数值越大，出场越快 (大于1无意义)
+     
+          "variable.wasd_blend_time_enter = v.blend_time_enter * 0.02;", //WASD 渐变入场时间，默认为0.02s，数值越大，入场越快 (大于1无意义)
+          "variable.wasd_blend_time_appear = v.blend_time_appear * 0.01;", //WASD 渐变出场时间，默认为0.01s，数值越大，出场越快 (大于1无意义)
+     
+          "variable.t_pr_jump_dynamic_size_enter = v.dynamic_size_enter * 0.93;", //跳跃 按键动态效果入场大小，默认为0.93，数值越大，入场按键尺寸越大 (建议小于等于1)
+          "variable.t_pr_jump_dynamic_size_appear = v.dynamic_size_appear * 1.06;", //跳跃 按键动态效果出场大小，默认为1.06，数值越大，出场按键尺寸越大 (建议大于等于1)
+     
+          "variable.t_pr_lmb_dynamic_size_enter = v.dynamic_size_enter * 0.93;", //lmb 按键动态效果入场大小，默认为0.93，数值越大，入场按键尺寸越大 (建议小于等于1)
+          "variable.t_pr_lmb_dynamic_size_appear = v.dynamic_size_appear * 1.06;", //lmb 按键动态效果出场大小，默认为1.06，数值越大，出场按键尺寸越大 (建议大于等于1)
+     
+          "variable.t_pr_rmb_dynamic_size_enter = v.dynamic_size_enter * 0.93;", //rmb 按键动态效果入场大小，默认为0.93，数值越大，入场按键尺寸越大 (建议小于等于1)
+          "variable.t_pr_rmb_dynamic_size_appear = v.dynamic_size_appear * 1.06;", //rmb 按键动态效果出场大小，默认为1.06，数值越大，出场按键尺寸越大 (建议大于等于1)
+     
+          "variable.t_pr_w_dynamic_size_enter = v.dynamic_size_enter * 0.93;", //W 按键动态效果入场大小，默认为0.93，数值越大，入场按键尺寸越大 (建议小于等于1)
+          "variable.t_pr_w_dynamic_size_appear = v.dynamic_size_appear * 1.06;", //W 按键动态效果出场大小，默认为1.06，数值越大，出场按键尺寸越大 (建议大于等于1)
+          "variable.t_pr_w_dynamic_time_enter = v.dynamic_time_enter * 0.75;", //W 按键动态效果入场时间，默认为0.75，数值越大，入场时间越快 (建议小于等于1) (入场时间随按键入场尺寸不同而表现出不同效果，一般很小可忽略)
+     
+          "variable.t_pr_a_dynamic_size_enter = v.dynamic_size_enter * 0.93;", //A 按键动态效果入场大小，默认为0.93，数值越大，入场按键尺寸越大 (建议小于等于1)
+          "variable.t_pr_a_dynamic_size_appear = v.dynamic_size_appear * 1.06;", //A 按键动态效果出场大小，默认为1.06，数值越大，出场按键尺寸越大 (建议大于等于1)
+          "variable.t_pr_a_dynamic_time_enter = v.dynamic_time_enter * 0.75;", //A 按键动态效果入场时间，默认为0.75，数值越大，入场时间越快 (建议小于等于1) (入场时间随按键入场尺寸不同而表现出不同效果，一般很小可忽略)
+     
+          "variable.t_pr_s_dynamic_size_enter = v.dynamic_size_enter * 0.93;", //S 按键动态效果入场大小，默认为0.93，数值越大，入场按键尺寸越大 (建议小于等于1)
+          "variable.t_pr_s_dynamic_size_appear = v.dynamic_size_appear * 1.06;", //S 按键动态效果出场大小，默认为1.06，数值越大，出场按键尺寸越大 (建议大于等于1)
+          "variable.t_pr_s_dynamic_time_enter = v.dynamic_time_enter * 0.75;", //S 按键动态效果入场时间，默认为0.75，数值越大，入场时间越快 (建议小于等于1) (入场时间随按键入场尺寸不同而表现出不同效果，一般很小可忽略)
+     
+          "variable.t_pr_d_dynamic_size_enter = v.dynamic_size_enter * 0.93;", //D 按键动态效果入场大小，默认为0.93，数值越大，入场按键尺寸越大 (建议小于等于1)
+          "variable.t_pr_d_dynamic_size_appear = v.dynamic_size_appear * 1.06;", //D 按键动态效果出场大小，默认为1.06，数值越大，出场按键尺寸越大 (建议大于等于1)
+          "variable.t_pr_d_dynamic_time_enter = v.dynamic_time_enter * 0.75;" //D 按键动态效果入场时间，默认为0.75，数值越大，入场时间越快 (建议小于等于1) (入场时间随按键入场尺寸不同而表现出不同效果，一般很小可忽略)"
+         ],
+        "pre_animation": [
+          "variable.helmet_layer_visible = 1.0;",
+          "variable.leg_layer_visible = 1.0;",
+          "variable.boot_layer_visible = 1.0;",
+          "variable.chest_layer_visible = 1.0;",
+          "variable.attack_body_rot_y = Math.sin(360*Math.sqrt(variable.attack_time)) * 5.0;",
+          "variable.tcos0 = (math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
+          "variable.first_person_rotation_factor = math.sin((1 - variable.attack_time) * 180.0);",
+          "variable.hand_bob = query.life_time < 0.01 ? 0.0 : variable.hand_bob + ((query.is_on_ground && query.is_alive ? math.clamp(math.sqrt(math.pow(query.position_delta(0), 2.0) + math.pow(query.position_delta(2), 2.0)), 0.0, 0.1) : 0.0) - variable.hand_bob) * 0.02;",
+          "variable.map_angle = math.clamp(1 - variable.player_x_rotation / 45.1, 0.0, 1.0);",
+          "variable.item_use_normalized = query.main_hand_item_use_duration / query.main_hand_item_max_duration;",
+          "variable.m_nos = q.is_moving == 1.0 && q.is_sprinting != 1.0;",
+
+          "variable.direction_hud_enabled = 1.0;",
+          "variable.enchanted_helmet = query.armor_material_slot(0) == 1 || query.armor_material_slot(0) == 3;",
+          "variable.enchanted_chestplate = query.armor_material_slot(1) == 1 || query.armor_material_slot(1) == 3;",
+          "variable.enchanted_leggings = query.armor_material_slot(2) == 1 || query.armor_material_slot(2) == 3;",
+          "variable.enchanted_boots = query.armor_material_slot(3) == 1 || query.armor_material_slot(3) == 3;"
+        ],
+        "animate": [
+          "root",
+          "particle",
+          "direction_hud",
+          "c_t_pr_variable",
+          "c_t_pr_root",
+
+          "boots",
+          "leggings",
+          "chestplate",
+          "helmet",
+
+          "perspective",//3rd person
+          "hurt_time",
+          {"render":"query.is_in_ui"}
+        ]
+      },
+     "particle_effects": {
+        "particle": "drakon:particle",
+        "damage": "ambient:damage_emitter"
+      },
+      "animations": {
+      	"hurt_time": "controller.animation.hurt_time",
+      	"perspective": "controller.animation.perspective",
+        "direction_hud": "animation.direction_hud",
+        "render":"animation.render",
+        "particle": "controller.animation.particle",
+
+        "boots": "animation.boots",
+        "leggings": "animation.leggings",
+        "chestplate": "animation.chestplate",
+        "helmet": "animation.helmet",
+
+        "c_t_pr_variable": "controller.animation.t_pr_variable",
+        "c_t_pr_root": "controller.animation.t_pr_root",
+        "c_t_pr_ui": "controller.animation.t_pr_ui",
+        "c_t_pr_jump_blend": "controller.animation.t_pr_jump_blend",
+        "c_t_pr_lmb_blend": "controller.animation.t_pr_lmb_blend",
+        "c_t_pr_rmb_blend": "controller.animation.t_pr_rmb_blend",
+        "c_t_pr_w_blend": "controller.animation.t_pr_w_blend",
+        "c_t_pr_a_blend": "controller.animation.t_pr_a_blend",
+        "c_t_pr_s_blend": "controller.animation.t_pr_s_blend",
+        "c_t_pr_d_blend": "controller.animation.t_pr_d_blend",
+        "c_t_pr_jump_dynamic": "controller.animation.t_pr_jump_dynamic",
+        "c_t_pr_lmb_dynamic": "controller.animation.t_pr_lmb_dynamic",
+        "c_t_pr_rmb_dynamic": "controller.animation.t_pr_rmb_dynamic",
+        "c_t_pr_p_dynamic": "controller.animation.t_pr_p_dynamic",
+        "c_t_pr_w_dynamic": "controller.animation.t_pr_w_dynamic",
+        "c_t_pr_a_dynamic": "controller.animation.t_pr_a_dynamic",
+        "c_t_pr_s_dynamic": "controller.animation.t_pr_s_dynamic",
+        "c_t_pr_d_dynamic": "controller.animation.t_pr_d_dynamic",
+        "a_t_pr_empty": "animation.t_pr_empty",
+        "a_t_pr_ui": "animation.t_pr_ui",
+        "a_t_pr_ui_rotation": "animation.t_pr_ui_rotation",
+        "a_t_pr_jump_dynamic": "animation.t_pr_jump_dynamic",
+        "a_t_pr_lmb_dynamic": "animation.t_pr_lmb_dynamic",
+        "a_t_pr_rmb_dynamic": "animation.t_pr_rmb_dynamic",
+        "a_t_pr_p_dynamic": "animation.t_pr_p_dynamic",
+        "a_t_pr_w_dynamic": "animation.t_pr_w_dynamic",
+        "a_t_pr_a_dynamic": "animation.t_pr_a_dynamic",
+        "a_t_pr_s_dynamic": "animation.t_pr_s_dynamic",
+        "a_t_pr_d_dynamic": "animation.t_pr_d_dynamic",
+
+        "root": "controller.animation.player.root",
+        "base_controller": "controller.animation.player.base",
+        "hudplayer":  "controller.animation.player.hudplayer",
+        "humanoid_base_pose": "animation.humanoid.base_pose",
+        "look_at_target": "controller.animation.humanoid.look_at_target",
+        "look_at_target_ui": "animation.player.look_at_target.ui",
+        "look_at_target_default": "animation.humanoid.look_at_target.default",
+        "look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
+        "look_at_target_swimming": "animation.humanoid.look_at_target.swimming",
+        "look_at_target_inverted": "animation.player.look_at_target.inverted",
+        "cape": "animation.player.cape",
+        "move.arms": "animation.player.move.arms",
+        "move.legs": "animation.player.move.legs",
+        "swimming": "animation.player.swim",
+        "swimming.legs": "animation.player.swim.legs",
+        "riding.arms": "animation.player.riding.arms",
+        "riding.legs": "animation.player.riding.legs",
+        "holding": "animation.player.holding",
+        "brandish_spear": "animation.humanoid.brandish_spear",
+        "charging": "animation.humanoid.charging",
+        "attack.positions": "animation.player.attack.positions",
+        "attack.rotations": "animation.player.attack.rotations",
+        "sneaking": "animation.player.sneaking",
+        "bob": "animation.player.bob",
+        "damage_nearby_mobs": "animation.humanoid.damage_nearby_mobs",
+        "fishing_rod": "animation.humanoid.fishing_rod",
+        "use_item_progress": "animation.humanoid.use_item_progress",
+        "skeleton_attack": "animation.skeleton.attack",
+        "sleeping": "animation.player.sleeping",
+        "first_person_base_pose": "animation.player.first_person.base_pose",
+        "first_person_empty_hand": "animation.player.first_person.empty_hand",
+        "first_person_swap_item": "animation.player.first_person.swap_item",
+        "first_person_attack_controller": "controller.animation.player.first_person_attack",
+        "first_person_attack_rotation": "animation.player.first_person.attack_rotation",
+        "first_person_attack_rotation_item": "animation.player.first_person.attack_rotation_item",
+        "first_person_vr_attack_rotation": "animation.player.first_person.vr_attack_rotation",
+        "first_person_walk": "animation.player.first_person.walk",
+        "first_person_map_controller": "controller.animation.player.first_person_map",
+        "first_person_map_hold": "animation.player.first_person.map_hold",
+        "first_person_map_hold_attack": "animation.player.first_person.map_hold_attack",
+        "first_person_map_hold_off_hand": "animation.player.first_person.map_hold_off_hand",
+        "first_person_map_hold_main_hand": "animation.player.first_person.map_hold_main_hand",
+        "first_person_crossbow_equipped": "animation.player.first_person.crossbow_equipped",
+        "first_person_crossbow_hold": "animation.player.first_person.crossbow_hold",
+        "first_person_breathing_bob": "animation.player.first_person.breathing_bob",
+        "third_person_crossbow_equipped": "animation.player.crossbow_equipped",
+        "third_person_bow_equipped": "animation.player.bow_equipped",
+        "crossbow_hold": "animation.player.crossbow_hold",
+        "crossbow_controller": "controller.animation.player.crossbow",
+        "shield_block_main_hand": "animation.player.shield_block_main_hand",
+        "shield_block_off_hand": "animation.player.shield_block_off_hand",
+        "blink": "controller.animation.persona.blink"
+      },
+      "render_controllers": [
+        { "controller.render.player.first_person": "variable.is_first_person" },
+        { "controller.render.player.third_person": "!variable.is_first_person && !variable.map_face_icon" },
+        { "controller.render.player.map": "variable.map_face_icon" },
+
+        { "controller.render.cape":"variable.is_paperdoll || (variable.render == 1.0 && !variable.is_first_person)"},
+        { "controller.render.direction_hud": "v.is_paperdoll && !q.is_in_ui && v.direction_hud_enabled" },
+
+        {"controller.render.keystrokes_space": "query.is_in_ui && query.is_on_screen"},
+        {"controller.render.keystrokes_lmb": "query.is_in_ui && query.is_on_screen"},
+        {"controller.render.keystrokes_rmb": "query.is_in_ui && query.is_on_screen"},
+        {"controller.render.keystrokes_w": "query.is_in_ui && query.is_on_screen"},
+        {"controller.render.keystrokes_a": "query.is_in_ui && query.is_on_screen"},
+        {"controller.render.keystrokes_s": "query.is_in_ui && query.is_on_screen"},
+        {"controller.render.keystrokes_d": "query.is_in_ui && query.is_on_screen"},
+        {"controller.render.keystrokes_p": "query.is_in_ui && query.is_on_screen"},
+
+        { "controller.render.hud_helmet": "query.has_armor_slot(0) && query.is_in_ui" },
+        { "controller.render.hud_chestplate": "query.has_armor_slot(1) && query.is_in_ui" },
+        { "controller.render.hud_leggings": "query.has_armor_slot(2) && query.is_in_ui" },
+        { "controller.render.hud_boots": "query.has_armor_slot(3) && query.is_in_ui" },
+        "controller.render.player.damage_particle"
+      ],
+      "enable_attachables": true
+    }
+  }
+}

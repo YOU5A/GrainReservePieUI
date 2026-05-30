@@ -1,0 +1,88 @@
+{
+ "format_version": "1.10.0",
+ "animation_controllers": {
+  "controller.animation.t_pr_variable": {
+   "states": {
+    "default": {
+     "blend_transition": 0.0,
+     "transitions": [
+      {"1": "1.0"}
+     ],
+     "on_entry": [
+      "v.rmb_block_all = v.rmb_block ?
+       query.get_equipped_item_name(0, 1) == 'white_wool' ||
+       query.get_equipped_item_name(0, 1) == 'light_gray_wool' ||
+       query.get_equipped_item_name(0, 1) == 'gray_wool' ||
+       query.get_equipped_item_name(0, 1) == 'black_wool' ||
+       query.get_equipped_item_name(0, 1) == 'brown_wool' ||
+       query.get_equipped_item_name(0, 1) == 'red_wool' ||
+       query.get_equipped_item_name(0, 1) == 'orange_wool' ||
+       query.get_equipped_item_name(0, 1) == 'yellow_wool' ||
+       query.get_equipped_item_name(0, 1) == 'lime_wool' ||
+       query.get_equipped_item_name(0, 1) == 'green_wool' ||
+       query.get_equipped_item_name(0, 1) == 'cyan_wool' ||
+       query.get_equipped_item_name(0, 1) == 'light_blue_wool' ||
+       query.get_equipped_item_name(0, 1) == 'blue_wool' ||
+       query.get_equipped_item_name(0, 1) == 'purple_wool' ||
+       query.get_equipped_item_name(0, 1) == 'magenta_wool' ||
+       query.get_equipped_item_name(0, 1) == 'pink_wool' ||
+       query.get_equipped_item_name(0, 1) == 'wool' ||
+       query.get_equipped_item_name(0, 1) == 'snowball' ||
+       query.get_equipped_item_name(0, 1) == 'ender_pearl' ||
+       query.get_equipped_item_name(0, 1) == 'splash_potion' ||
+       query.get_equipped_item_name(0, 1) == 'lingering_potion' ||
+       query.get_equipped_item_name(0, 1) == 'water_bucket' ||
+       query.get_equipped_item_name(0, 1) == 'lava_bucket' ||
+       query.get_equipped_item_name(0, 1) == 'fishing_rod' : 0.0 ;",
+      "v.t_pr_w = query.movement_direction(2) >= 0.1 && query.movement_direction(2) > math.abs(query.movement_direction(0)) || (v.wasd && math.abs(query.position_delta(2)) - math.abs(query.position_delta(0)) <= 6) ? 1.0 : 0.0;",
+      "v.t_pr_a = query.movement_direction(0) >= 0.1 && query.movement_direction(0) > math.abs(query.movement_direction(2)) ? 1.0 : 0.0;",
+      "v.t_pr_d = -query.movement_direction(0) >= 0.1 && -query.movement_direction(0) > math.abs(query.movement_direction(2)) ? 1.0 : 0.0;",
+      "v.t_pr_s = -query.movement_direction(2) >= 0.1 && -query.movement_direction(2) > math.abs(query.movement_direction(0)) || (v.wasd && math.abs(query.position_delta(2)) - math.abs(query.position_delta(0)) <= 6) ? 1.0 : 0.0;",
+      "v.t_pr_rotation = (query.camera_rotation(1) > -45 && query.camera_rotation(1) <= 0 ? {return v.t_pr_rotation = 0;}; query.camera_rotation(1) < -45 && query.camera_rotation(1) > -135 ? {return v.t_pr_rotation = 90;}; query.camera_rotation(1) < -135 && (query.camera_rotation(1) > -180 || query.camera_rotation(1) < 180) ? {return v.t_pr_rotation = 180;}; query.camera_rotation(1) > 0 && query.camera_rotation(1) < 45 ? {return v.t_pr_rotation = 0;}; query.camera_rotation(1) > 45 && query.camera_rotation(1) < 135 ? {return v.t_pr_rotation = -90;}; query.camera_rotation(1) > 135 && (query.camera_rotation(1) > -180 || query.camera_rotation(1) < 180) ? {return v.t_pr_rotation = -180;}; );"
+     ]
+    },
+    "1": {
+     "animations": [
+      "a_t_pr_empty"
+     ],
+     "blend_transition": 0.0,
+     "transitions": [
+      {"default": "1.0"}
+     ],
+     "on_entry": [
+      "v.rmb_block_all = v.rmb_block ? 
+      query.get_equipped_item_name(0, 1) == 'white_wool' ||
+      query.get_equipped_item_name(0, 1) == 'light_gray_wool' ||
+      query.get_equipped_item_name(0, 1) == 'gray_wool' ||
+      query.get_equipped_item_name(0, 1) == 'black_wool' ||
+      query.get_equipped_item_name(0, 1) == 'brown_wool' ||
+      query.get_equipped_item_name(0, 1) == 'red_wool' ||
+      query.get_equipped_item_name(0, 1) == 'orange_wool' ||
+      query.get_equipped_item_name(0, 1) == 'yellow_wool' ||
+      query.get_equipped_item_name(0, 1) == 'lime_wool' ||
+      query.get_equipped_item_name(0, 1) == 'green_wool' ||
+      query.get_equipped_item_name(0, 1) == 'cyan_wool' ||
+      query.get_equipped_item_name(0, 1) == 'light_blue_wool' ||
+      query.get_equipped_item_name(0, 1) == 'blue_wool' ||
+      query.get_equipped_item_name(0, 1) == 'purple_wool' ||
+      query.get_equipped_item_name(0, 1) == 'magenta_wool' ||
+      query.get_equipped_item_name(0, 1) == 'pink_wool' ||
+      query.get_equipped_item_name(0, 1) == 'wool' ||
+      query.get_equipped_item_name(0, 1) == 'snowball' ||
+      query.get_equipped_item_name(0, 1) == 'ender_pearl' ||
+      query.get_equipped_item_name(0, 1) == 'splash_potion' ||
+      query.get_equipped_item_name(0, 1) == 'lingering_potion' ||
+      query.get_equipped_item_name(0, 1) == 'water_bucket' ||
+      query.get_equipped_item_name(0, 1) == 'lava_bucket' ||
+      query.get_equipped_item_name(0, 1) == 'fishing_rod' : 0.0 ;",
+      "v.t_pr_w = query.movement_direction(2) >= 0.1 && query.movement_direction(2) > math.abs(query.movement_direction(0)) || (v.wasd && math.abs(query.position_delta(2)) - math.abs(query.position_delta(0)) <= 6) ? 1.0 : 0.0;",
+      "v.t_pr_a = query.movement_direction(0) >= 0.1 && query.movement_direction(0) > math.abs(query.movement_direction(2)) ? 1.0 : 0.0;",
+      "v.t_pr_d = -query.movement_direction(0) >= 0.1 && -query.movement_direction(0) > math.abs(query.movement_direction(2)) ? 1.0 : 0.0;",
+      "v.t_pr_s = -query.movement_direction(2) >= 0.1 && -query.movement_direction(2) > math.abs(query.movement_direction(0)) || (v.wasd && math.abs(query.position_delta(2)) - math.abs(query.position_delta(0)) <= 6) ? 1.0 : 0.0;",
+      "v.t_pr_rotation = (query.camera_rotation(1) > -45 && query.camera_rotation(1) <= 0 ? {return v.t_pr_rotation = 0;}; query.camera_rotation(1) < -45 && query.camera_rotation(1) > -135 ? {return v.t_pr_rotation = 90;}; query.camera_rotation(1) < -135 && (query.camera_rotation(1) > -180 || query.camera_rotation(1) < 180) ? {return v.t_pr_rotation = 180;}; query.camera_rotation(1) > 0 && query.camera_rotation(1) < 45 ? {return v.t_pr_rotation = 0;}; query.camera_rotation(1) > 45 && query.camera_rotation(1) < 135 ? {return v.t_pr_rotation = -90;}; query.camera_rotation(1) > 135 && (query.camera_rotation(1) > -180 || query.camera_rotation(1) < 180) ? {return v.t_pr_rotation = -180;}; );"
+     ]
+    }
+   }
+  }
+ }
+}

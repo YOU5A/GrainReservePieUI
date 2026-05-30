@@ -1,0 +1,59 @@
+{
+/***
+*  __   __   ___    _   _   ____       _    
+*  \ \ / /  / _ \  | | | | / ___|     / \   
+*   \ V /  | | | | | | | | \___ \    / _ \  
+*    | |   | |_| | | |_| |  ___) |  / ___ \ 
+*    |_|    \___/   \___/  |____/  /_/   \_\
+*                                           
+*/
+  "namespace": "color",
+
+  "rgb_color_base": {
+    "anim_type": "color",
+    "duration":  0.08,
+    "from": "$color_value",
+    "to": "$color_value"
+  },
+
+  "rgb_color_01@color.rgb_color_base": { "next": "@color.rgb_color_02", "$color_value": [ 0.2500000, 1.0000000, 1.0000000 ] },
+  "rgb_color_02@color.rgb_color_base": { "next": "@color.rgb_color_03", "$color_value": [ 0.2500000, 1.0000000, 0.9000000 ] },
+  "rgb_color_03@color.rgb_color_base": { "next": "@color.rgb_color_04", "$color_value": [ 0.2500000, 1.0000000, 0.8000000 ] },
+  "rgb_color_04@color.rgb_color_base": { "next": "@color.rgb_color_05", "$color_value": [ 0.2500000, 1.0000000, 0.7000000 ] },
+  "rgb_color_05@color.rgb_color_base": { "next": "@color.rgb_color_06", "$color_value": [ 0.2500000, 1.0000000, 0.6000000 ] },
+  "rgb_color_06@color.rgb_color_base": { "next": "@color.rgb_color_07", "$color_value": [ 0.2500000, 1.0000000, 0.5000000 ] },
+  "rgb_color_07@color.rgb_color_base": { "next": "@color.rgb_color_08", "$color_value": [ 0.2500000, 1.0000000, 0.4000000 ] },
+  "rgb_color_08@color.rgb_color_base": { "next": "@color.rgb_color_09", "$color_value": [ 0.2500000, 1.0000000, 0.2500000 ] },
+  "rgb_color_09@color.rgb_color_base": { "next": "@color.rgb_color_10", "$color_value": [ 0.3750000, 1.0000000, 0.2500000 ] },
+  "rgb_color_10@color.rgb_color_base": { "next": "@color.rgb_color_11", "$color_value": [ 0.5000000, 1.0000000, 0.2500000 ] },
+  "rgb_color_11@color.rgb_color_base": { "next": "@color.rgb_color_12", "$color_value": [ 0.6250000, 1.0000000, 0.2500000 ] },
+  "rgb_color_12@color.rgb_color_base": { "next": "@color.rgb_color_13", "$color_value": [ 0.7500000, 1.0000000, 0.2500000 ] },
+  "rgb_color_13@color.rgb_color_base": { "next": "@color.rgb_color_14", "$color_value": [ 0.8750000, 1.0000000, 0.2500000 ] },
+  "rgb_color_14@color.rgb_color_base": { "next": "@color.rgb_color_15", "$color_value": [ 1.0000000, 1.0000000, 0.2500000 ] },
+  "rgb_color_15@color.rgb_color_base": { "next": "@color.rgb_color_16", "$color_value": [ 1.0000000, 0.9000000, 0.2500000 ] },
+  "rgb_color_16@color.rgb_color_base": { "next": "@color.rgb_color_17", "$color_value": [ 1.0000000, 0.8000000, 0.2500000 ] },
+  "rgb_color_17@color.rgb_color_base": { "next": "@color.rgb_color_18", "$color_value": [ 1.0000000, 0.7000000, 0.2500000 ] },
+  "rgb_color_18@color.rgb_color_base": { "next": "@color.rgb_color_19", "$color_value": [ 1.0000000, 0.6000000, 0.2500000 ] },
+  "rgb_color_19@color.rgb_color_base": { "next": "@color.rgb_color_20", "$color_value": [ 1.0000000, 0.5000000, 0.2500000 ] },
+  "rgb_color_20@color.rgb_color_base": { "next": "@color.rgb_color_21", "$color_value": [ 1.0000000, 0.4000000, 0.2500000 ] },
+  "rgb_color_21@color.rgb_color_base": { "next": "@color.rgb_color_22", "$color_value": [ 1.0000000, 0.2500000, 0.2500000 ] },
+  "rgb_color_22@color.rgb_color_base": { "next": "@color.rgb_color_23", "$color_value": [ 1.0000000, 0.2500000, 0.4000000 ] },
+  "rgb_color_23@color.rgb_color_base": { "next": "@color.rgb_color_24", "$color_value": [ 1.0000000, 0.2500000, 0.5000000 ] },
+  "rgb_color_24@color.rgb_color_base": { "next": "@color.rgb_color_25", "$color_value": [ 1.0000000, 0.2500000, 0.6000000 ] },
+  "rgb_color_25@color.rgb_color_base": { "next": "@color.rgb_color_26", "$color_value": [ 1.0000000, 0.2500000, 0.7000000 ] },
+  "rgb_color_26@color.rgb_color_base": { "next": "@color.rgb_color_27", "$color_value": [ 1.0000000, 0.2500000, 0.8000000 ] },
+  "rgb_color_27@color.rgb_color_base": { "next": "@color.rgb_color_28", "$color_value": [ 1.0000000, 0.2500000, 0.9000000 ] },
+  "rgb_color_28@color.rgb_color_base": { "next": "@color.rgb_color_29", "$color_value": [ 1.0000000, 0.2500000, 1.0000000 ] },
+  "rgb_color_29@color.rgb_color_base": { "next": "@color.rgb_color_30", "$color_value": [ 0.8750000, 0.2500000, 1.0000000 ] },
+  "rgb_color_30@color.rgb_color_base": { "next": "@color.rgb_color_31", "$color_value": [ 0.7500000, 0.2500000, 1.0000000 ] },
+  "rgb_color_31@color.rgb_color_base": { "next": "@color.rgb_color_32", "$color_value": [ 0.6250000, 0.2500000, 1.0000000 ] },
+  "rgb_color_32@color.rgb_color_base": { "next": "@color.rgb_color_33", "$color_value": [ 0.5000000, 0.2500000, 1.0000000 ] },
+  "rgb_color_33@color.rgb_color_base": { "next": "@color.rgb_color_34", "$color_value": [ 0.3750000, 0.2500000, 1.0000000 ] },
+  "rgb_color_34@color.rgb_color_base": { "next": "@color.rgb_color_35", "$color_value": [ 0.2500000, 0.2500000, 1.0000000 ] },
+  "rgb_color_35@color.rgb_color_base": { "next": "@color.rgb_color_36", "$color_value": [ 0.2500000, 0.4000000, 1.0000000 ] },
+  "rgb_color_36@color.rgb_color_base": { "next": "@color.rgb_color_37", "$color_value": [ 0.2500000, 0.5000000, 1.0000000 ] },
+  "rgb_color_37@color.rgb_color_base": { "next": "@color.rgb_color_38", "$color_value": [ 0.2500000, 0.6000000, 1.0000000 ] },
+  "rgb_color_38@color.rgb_color_base": { "next": "@color.rgb_color_39", "$color_value": [ 0.2500000, 0.7000000, 1.0000000 ] },
+  "rgb_color_39@color.rgb_color_base": { "next": "@color.rgb_color_40", "$color_value": [ 0.2500000, 0.8000000, 1.0000000 ] },
+  "rgb_color_40@color.rgb_color_base": { "next": "@color.rgb_color_01", "$color_value": [ 0.2500000, 0.9000000, 1.0000000 ] }
+}

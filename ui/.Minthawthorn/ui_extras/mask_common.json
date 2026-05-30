@@ -1,0 +1,529 @@
+{
+  "namespace":"debug_screen",
+  //--------------------------------------------------------------------------
+  // mask list
+  //--------------------------------------------------------------------------
+  "mask_rgb_button":{
+    "type": "image",
+    "texture": "textures/ui/White",
+    "size": [ "100% - 2px", 22 ],
+    "alpha": 0,
+    "layer": 10,
+    "controls": [
+      {
+        "info@debug_screen.masking_content_button": {
+          "$setting_button_texture": "textures/PFMAXLNX/tm",
+          "$section_topic": "mask_rgb",
+          "$title_text": "mask.rgb.text",
+          "size": [ "100%", "100%" ],
+          "$toggle_group_forced_index": 9
+        }
+      }
+    ]
+  },
+
+  "mask_list_0@debug_screen.main_sections": {
+    "size": [ "100%", 20 ],
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "scross_0":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": [ 1, 1, 1 ],
+          "size": [ 22, 22 ],
+          "alpha": 0.42,
+          "layer": 10,
+          "controls": [
+            {
+              "button_0@debug_screen.masking_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/tm",
+                "$section_topic": "mask_0",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_1": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "scross_1":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": [ 0, 0, 0 ],
+          "size": [ 22, 22 ],
+          "alpha": 0.42,
+          "layer": 10,
+          "controls": [
+            {
+              "button_1@debug_screen.masking_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/tm",
+                "$section_topic": "mask_1",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 1
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_2": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "scross_2":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": [ 1, 0, 0 ],
+          "size": [ 22, 22 ],
+          "alpha": 0.42,
+          "layer": 10,
+          "controls": [
+            {
+              "button_2@debug_screen.masking_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/tm",
+                "$section_topic": "mask_2",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 2
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_3": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      }
+    ]
+  },
+
+  "mask_list_1@debug_screen.main_sections": {
+    "size": [ "100%", 20 ],
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "scross_3":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": [ 1, 0.5, 0 ],
+          "size": [ 22, 22 ],
+          "alpha": 0.42,
+          "layer": 10,
+          "controls": [
+            {
+              "button_3@debug_screen.masking_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/tm",
+                "$section_topic": "mask_3",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 3
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_4": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "scross_4":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": [ 1, 1, 0 ],
+          "size": [ 22, 22 ],
+          "alpha": 0.42,
+          "layer": 10,
+          "controls": [
+            {
+              "button_4@debug_screen.masking_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/tm",
+                "$section_topic": "mask_4",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 4
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_5": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "scross_5":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": [ 0, 1, 0 ],
+          "size": [ 22, 22 ],
+          "alpha": 0.42,
+          "layer": 10,
+          "controls": [
+            {
+              "button_5@debug_screen.masking_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/tm",
+                "$section_topic": "mask_5",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 5
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_6": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      }
+    ]
+  },
+
+  "mask_list_2@debug_screen.main_sections": {
+    "size": [ "100%", 20 ],
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "scross_6":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": [ 0, 1, 0.8 ],
+          "size": [ 22, 22 ],
+          "alpha": 0.42,
+          "layer": 10,
+          "controls": [
+            {
+              "button_6@debug_screen.masking_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/tm",
+                "$section_topic": "mask_6",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 6
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_7": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "scross_7":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": [ 0, 1, 1 ],
+          "size": [ 22, 22 ],
+          "alpha": 0.42,
+          "layer": 10,
+          "controls": [
+            {
+              "button_7@debug_screen.masking_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/tm",
+                "$section_topic": "mask_7",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 7
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_8": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "scross_8":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "color": [ 1, 0, 1 ],
+          "size": [ 22, 22 ],
+          "alpha": 0.42,
+          "layer": 10,
+          "controls": [
+            {
+              "button_8@debug_screen.masking_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/tm",
+                "$section_topic": "mask_8",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 8
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_3": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      }
+    ]
+  },
+
+  //--------------------------------------------------------------------------
+  // mask list hud
+  //--------------------------------------------------------------------------
+  "masking_image": {
+    "type": "image",
+    "$texture": "textures/ui/White",
+    "$size": [ "500%", "500%" ],
+    "$color|default": [ 1,1,1 ],
+    "layer": 1,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "debug_screen.mask_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "mask_RGB": {
+          "type": "image",
+          "texture": "$texture",
+          "size": "$size",
+          "anims": [ "@color.rgb_color_01" ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mask_alpha_slider",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "mask_rgb_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "mask_0": {
+          "type": "image",
+          "texture": "$texture",
+          "size": "$size",
+          "color": [ 1, 1, 1 ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mask_alpha_slider",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "mask_0_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "mask_1": {
+          "type": "image",
+          "texture": "$texture",
+          "size": "$size",
+          "color": [ 0, 0, 0 ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mask_alpha_slider",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "mask_1_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "mask_2": {
+          "type": "image",
+          "texture": "$texture",
+          "size": "$size",
+          "color": [ 1, 0, 0 ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mask_alpha_slider",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "mask_2_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "mask_3": {
+          "type": "image",
+          "texture": "$texture",
+          "size": "$size",
+          "color": [ 1, 0.5, 0 ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mask_alpha_slider",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "mask_3_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "mask_4": {
+          "type": "image",
+          "texture": "$texture",
+          "size": "$size",
+          "color": [ 1, 1, 0 ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mask_alpha_slider",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "mask_4_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "mask_5": {
+          "type": "image",
+          "texture": "$texture",
+          "size": "$size",
+          "color": [ 0, 1, 0 ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mask_alpha_slider",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "mask_5_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "mask_6": {
+          "type": "image",
+          "texture": "$texture",
+          "size": "$size",
+          "color": [ 0, 1, 0.8 ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mask_alpha_slider",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "mask_6_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "mask_7": {
+          "type": "image",
+          "texture": "$texture",
+          "size": "$size",
+          "color": [ 0, 1, 1 ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mask_alpha_slider",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "mask_7_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "mask_8": {
+          "type": "image",
+          "texture": "$texture",
+          "size": "$size",
+          "color": [ 1, 0, 1 ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "mask_alpha_slider",
+              "source_property_name": "(#slider_value / 10)",
+              "target_property_name": "#alpha"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "mask_8_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

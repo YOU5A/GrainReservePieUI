@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.fps9": {
+      "initial_state": "calculation",
+      "states": {
+        "default": {
+          "on_entry": [
+            "variable.life_time = query.life_time;"
+          ],
+          "transitions": [
+            { "calculation": "(query.life_time - variable.life_time) >= 2" }
+          ]
+        },
+        "calculation": {
+          "on_entry": [
+            "variable.fps9 = ((1/query.delta_time+ 1/query.delta_time+ 1/query.delta_time+ 1/query.delta_time+ 1/query.delta_time+ 1/query.delta_time+ 1/query.delta_time+ 1/query.delta_time) <= 680 && (1/query.delta_time+ 1/query.delta_time+ 1/query.delta_time+ 1/query.delta_time+ 1/query.delta_time+ 1/query.delta_time+ 1/query.delta_time) >= 570.1) * 10;"
+          ],
+          "transitions": [ { "default": "1.0" } ]
+        }
+      }
+    }
+  }
+}

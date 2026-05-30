@@ -1,0 +1,1239 @@
+{
+  "namespace":"debug_screen",
+  //--------------------------------------------------------------------------
+  // Hud Setting quote
+  //--------------------------------------------------------------------------
+  "hud_setting_content": {
+    "type": "stack_panel",
+    "size": [ "50%", "60%" ],
+    "offset": [ 4, "5%" ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      }
+    ],
+    "controls": [
+      {
+        "background_white": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "size": [ "96%", 14 ],
+          "layer": 1,
+          "alpha": 0.4,
+          "controls": [
+            {
+              "title_icon": {
+                "type": "image",
+                "texture": "textures/MintUI/pack_icon",
+                "anchor_to": "left_middle",
+                "anchor_from": "left_middle",
+                "offset": [ 2, 0 ],
+                "size": [ 10, 10 ],
+                "layer": 2,
+                "alpha": 1
+              }
+            },
+            {
+              "title_label": {
+                "type": "label",
+                "size": [ "100% - 36px", "10px" ],
+                "offset": [ 13, 0 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "text": "Minecraft - Hud Settings",
+                "localize": true,
+                "font_type": "$rainbowpie_ui_theme_global_font_name",
+                "backup_font_type": "$rainbowpie_ui_theme_global_font_name_backup",
+                "color": [ 1, 1, 1 ],
+                "layer": 2
+              }
+            },
+            {
+              "din_icon": {
+                "type": "image",
+                "texture": "($rainbowpie_ui_path_theme + '/icon/settings/GrainReservePie/din')",
+                "anchor_to": "right_middle",
+                "anchor_from": "right_middle",
+                "offset": [ -2, 0 ],
+                "size": [ 10, 10 ],
+                "layer": 2,
+                "alpha": 1
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "mods_main": {
+          "type": "input_panel",
+          "prevent_touch_input": true,
+          "size": [ "96%", "10%" ],
+          "$default_selector_toggle_index": 0,
+          "controls": [
+            {
+              "mods_background":{
+                "type": "image",
+                "texture": "textures/ui/White",
+                "size": [ "49.7%", "100%" ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "alpha": 0,
+                "layer": 10,
+                "controls": [
+                  {
+                    "mod@debug_screen.all_panel_content_button": {
+                      "size": [ "100%", "100%" ],
+                      "$title_text": "hud.switch.text",
+                      "$section_topic": "home",
+                      "$toggle_group_forced_index": 0
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "expand_background":{
+                "type": "image",
+                "texture": "textures/ui/White",
+                "size": [ "49.7%", "100%" ],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "alpha": 0,
+                "layer": 10,
+                "controls": [
+                  {
+                    "mod@debug_screen.all_panel_content_button": {
+                      "size": [ "100%", "100%" ],
+                      "$title_text": "mod.switch.text",
+                      "$section_topic": "mod",
+                      "$toggle_group_forced_index": 1
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_1": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "background": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "size": [ "96%", "55%" ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "alpha": 0.42,
+          "layer": 1,
+          "controls": [
+            {
+              "background1": {
+                "type": "input_panel",
+                "prevent_touch_input": true,
+                "size": [ "100%", "100%" ],
+                "controls": [
+                  {
+                    "background": {
+                      "type": "image",
+                      "texture": "textures/ui/White",
+                      "size": [ "97.5%", "96%" ],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "alpha": 0.3,
+                      "layer": 2,
+                      "controls": [
+                        {
+                          "setting_scroll_panel@common.scrolling_panel": {
+                            "$scroll_track_image_control": "rainbowpie_ui_controls.scroll_indent_image",
+                            "$scroll_box_mouse_image_control": "rainbowpie_ui_controls.scrollbar_box_image",
+                            "size": [ "100% - 5px", "100% - 5px" ],
+                            "offset": [ 1, 0 ],
+                            "$show_background": false,
+                            "$scroll_box_visible": true,
+                            "$always_handle_scrolling": false,
+                            "$scroll_track_size": [ "100% - 2px", "100% - 4px" ],
+                            "$scrolling_content": "debug_screen.hud_settings_content"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "scross_content_panel": {
+                "type": "input_panel",
+                "offset": [ "75%", -20 ],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "debug_screen.False_SCross",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "draggable_both": {
+                      "type": "input_panel",
+                      "prevent_touch_input": true,
+                      "draggable": "both",
+                      "button_mappings": [
+                        {
+                          "from_button_id": "button.menu_select",
+                          "to_button_id": "button.menu_select",
+                          "mapping_type": "pressed"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "scross_panel": {
+                            "type": "stack_panel",
+                            "size": [ 112, 120 ],
+                            "controls": [
+                              {
+                                "background_tab": {
+                                  "type": "image",
+                                  "texture": "textures/ui/Black",
+                                  "size": [ "100%", 23 ],
+                                  "offset": [ 0, -1 ],
+                                  "anchor_from": "top_middle",
+                                  "anchor_to": "top_middle",
+                                  "layer": 1,
+                                  "alpha": 0.2,
+                                  "controls": [
+                                    {
+                                      "debug01@rainbowpie_ui_common.debug_draw": {
+                                        "$rainbowpie_localui_debug_name": "scross_panel"
+                                      }
+                                    },
+                                    {
+                                      "text": {
+                                        "type": "label",
+                                        "size": [ "100%", "10px" ],
+                                        "offset": [ 3, 3 ],
+                                        "anchor_from": "top_left",
+                                        "anchor_to": "top_left",
+                                        "text": "hide.scross.icon",
+                                        "shadow": true,
+                                        "font_scale_factor": 0.9,
+                                        "font_type": "$rainbowpie_ui_theme_global_font_name",
+                                        "backup_font_type": "$rainbowpie_ui_theme_global_font_name_backup",
+                                        "color": [ 1, 1, 1 ],
+                                        "alpha": 0.9,
+                                        "layer": 20
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "background_black": {
+                                  "type": "image",
+                                  "texture": "textures/ui/Black",
+                                  "size": [ "100%", "100%" ],
+                                  "offset": [ 0, 1 ],
+                                  "anchor_from": "bottom_middle",
+                                  "anchor_to": "bottom_middle",
+                                  "layer": 1,
+                                  "alpha": 0.3,
+                                  "controls": [
+                                    {
+                                      "background_white": {
+                                        "type": "image",
+                                        "texture": "textures/ui/White",
+                                        "size": [ "100% - 6px", "100% - 6px" ],
+                                        "layer": 1,
+                                        "alpha": 0.3,
+                                        "controls": [
+                                          {
+                                            "setting_scroll_panel@common.scrolling_panel": {
+                                              "$scroll_track_image_control": "rainbowpie_ui_controls.scroll_indent_image",
+                                              "$scroll_box_mouse_image_control": "rainbowpie_ui_controls.scrollbar_box_image",
+                                              "size": [ "100% - 2px", "100% - 5px" ],
+                                              "offset": [ 1, 0 ],
+                                              "$show_background": false,
+                                              "$scroll_box_visible": true,
+                                              "$always_handle_scrolling": false,
+                                              "$scroll_track_size": [ "100% - 2px", "100% - 4px" ],
+                                              "$scrolling_content": "debug_screen.scross_content"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "mask_content_panel": {
+                "type": "input_panel",
+                "offset": [ "-70%", -20 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "debug_screen.mask_button_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "draggable_both": {
+                      "type": "input_panel",
+                      "prevent_touch_input": true,
+                      "draggable": "both",
+                      "button_mappings": [
+                        {
+                          "from_button_id": "button.menu_select",
+                          "to_button_id": "button.menu_select",
+                          "mapping_type": "pressed"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "mask_panel": {
+                            "type": "stack_panel",
+                            "size": [ 88, 95 ],
+                            "controls": [
+                              {
+                                "background_tab": {
+                                  "type": "image",
+                                  "texture": "textures/ui/Black",
+                                  "size": [ "100%", 22 ],
+                                  "offset": [ 0, -1 ],
+                                  "anchor_from": "top_middle",
+                                  "anchor_to": "top_middle",
+                                  "layer": 1,
+                                  "alpha": 0.2,
+                                  "controls": [
+                                    {
+                                      "debug01@rainbowpie_ui_common.debug_draw": {
+                                        "$rainbowpie_localui_debug_name": "scross_panel"
+                                      }
+                                    },
+                                    {
+                                      "text": {
+                                        "type": "label",
+                                        "size": [ "100%", "10px" ],
+                                        "offset": [ 3, 3 ],
+                                        "anchor_from": "top_left",
+                                        "anchor_to": "top_left",
+                                        "text": "mask.switch.text",
+                                        "shadow": true,
+                                        "font_scale_factor": 0.9,
+                                        "font_type": "$rainbowpie_ui_theme_global_font_name",
+                                        "backup_font_type": "$rainbowpie_ui_theme_global_font_name_backup",
+                                        "color": [ 1, 1, 1 ],
+                                        "alpha": 0.9,
+                                        "layer": 20
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "background_black": {
+                                  "type": "image",
+                                  "texture": "textures/ui/Black",
+                                  "size": [ "100%", "100%" ],
+                                  "offset": [ 0, 1 ],
+                                  "anchor_from": "bottom_middle",
+                                  "anchor_to": "bottom_middle",
+                                  "layer": 1,
+                                  "alpha": 0.3,
+                                  "controls": [
+                                    {
+                                      "background_white": {
+                                        "type": "image",
+                                        "texture": "textures/ui/White",
+                                        "size": [ "100% - 6px", "100% - 6px" ],
+                                        "layer": 1,
+                                        "alpha": 0.3,
+                                        "controls": [
+                                          {
+                                            "setting_scroll_panel@common.scrolling_panel": {
+                                              "$scroll_track_image_control": "rainbowpie_ui_controls.scroll_indent_image",
+                                              "$scroll_box_mouse_image_control": "rainbowpie_ui_controls.scrollbar_box_image",
+                                              "size": [ "100% - 2px", "100% - 5px" ],
+                                              "offset": [ 1, 0 ],
+                                              "$show_background": false,
+                                              "$scroll_box_visible": true,
+                                              "$always_handle_scrolling": false,
+                                              "$scroll_track_size": [ "100% - 2px", "100% - 4px" ],
+                                              "$scrolling_content": "debug_screen.masking_content"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "background_mask_slider": {
+                                  "type": "image",
+                                  "texture": "textures/ui/Black",
+                                  "size": [ "100%", 18 ],
+                                  "alpha": 0.2,
+                                  "layer": 1,
+                                  "controls": [
+                                    { "mask_slider@debug_screen.mask_slider": {} }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_1": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      }
+    ]
+  },
+
+  "hud_settings_content@debug_screen.main_sections": {
+    "controls": [
+      { "00@debug_screen.mods_content":{} },
+      { "02@debug_screen.expand_content":{} }
+    ]
+  },
+
+  "all_panel_content_button@debug_screen.section_toggle_button": {
+    "$setup_toggle": "tab"
+  },
+  "mods_content@debug_screen.main_sections": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "home_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "button_1@debug_screen.setting_template_button": {
+          "$setting_button_texture": "($rainbowpie_ui_path_theme + '/icon/settings/GrainReservePie/False_Toolbox')",
+          "$setting_button_text": "display.filigrane.text",
+          "$project_control": "debug_screen.False_Toolbox"
+        }
+      },
+      {
+        "button_2@debug_screen.setting_template_button": {
+          "$setting_button_texture": "($rainbowpie_ui_path_theme + '/icon/settings/GrainReservePie/False_SCross')",
+          "$setting_button_text": "hide.scross.icon",
+          "$project_control": "debug_screen.False_SCross"
+        }
+      },
+      {
+        "button_3@debug_screen.setting_template_button": {
+          "$setting_button_texture": "($rainbowpie_ui_path_theme + '/icon/settings/GrainReservePie/eye_protection')",
+          "$setting_button_text": "mask.switch.text",
+          "$project_control": "debug_screen.mask_button_toggle"
+        }
+      },
+      {
+        "button_4@debug_screen.setting_template_button": {
+          "$setting_button_texture": "($rainbowpie_ui_path_theme + '/icon/settings/GrainReservePie/info_switch')",
+          "$setting_button_text": "info.switch.text",
+          "$project_control": "debug_screen.info_switch_control"
+        }
+      },
+      {
+        "button_5@debug_screen.setting_template_button": {
+          "$setting_button_texture": "($rainbowpie_ui_path_theme + '/icon/settings/GrainReservePie/compass_and_clock')",
+          "$setting_button_text": "compass.and.clock",
+          "$project_control": "debug_screen.compass_and_clock_control"
+        }
+      },
+      {
+        "button_6@debug_screen.setting_template_button": {
+          "ignored": "$hide_chat_control",
+          "$setting_button_texture": "($rainbowpie_ui_path_theme + '/icon/settings/GrainReservePie/hide_chat')",
+          "$setting_button_text": "hide.chat.text",
+          "$project_control": "debug_screen.hide_chat_control"
+        }
+      },
+      {
+        "button_7@debug_screen.setting_template_button": {
+          "ignored": "$scoreboard_hide_control",
+          "$setting_button_texture": "($rainbowpie_ui_path_theme + '/icon/settings/GrainReservePie/scoreboard_hide')",
+          "$setting_button_text": "look.scoreboard.hide",
+          "$project_control": "debug_screen.scoreboard_hide_control"
+        }
+      },
+      {
+        "button_8@debug_screen.setting_template_button": {
+          "ignored": "$hide_title_control",
+          "$setting_button_texture": "($rainbowpie_ui_path_theme + '/icon/settings/GrainReservePie/hide_title')",
+          "$setting_button_text": "hide.title.text",
+          "$project_control": "debug_screen.hide_title_control"
+        }
+      },
+      {
+        "button_9@debug_screen.setting_template_button": {
+          "ignored": "$hide_armor_held_control",
+          "$setting_button_texture": "($rainbowpie_ui_path_theme + '/icon/settings/GrainReservePie/skin')",
+          "$setting_button_text": "held.display.armor",
+          "$project_control": "debug_screen.hide_armor_held_control"
+        }
+      },
+      {
+        "button_10@debug_screen.setting_template_button": {
+          "ignored": "$items_durability_control",
+          "$setting_button_texture": "($rainbowpie_ui_path_theme + '/icon/settings/GrainReservePie/pie_chart')",
+          "$setting_button_text": "text.items.durability",
+          "$project_control": "debug_screen.items_durability_control"
+        }
+      },
+      {
+        "button_11@debug_screen.setting_template_button": {
+          "ignored": "$items_block_control",
+          "$setting_button_texture": "($rainbowpie_ui_path_theme + '/icon/settings/GrainReservePie/block')",
+          "$setting_button_text": "text.items.block",
+          "$project_control": "debug_screen.items_block_control"
+        }
+      }
+    ]
+  },
+
+  "expand_content@debug_screen.main_sections": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "mod_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "button_0@debug_screen.setting_template_button": {
+          "ignored": "$Hanabi_panel",
+          "$setting_button_texture": "($rainbowpie_ui_path_theme + '/icon/settings/GrainReservePie/is_Hanabi_Extend')",
+          "$setting_button_text": "$is_Hanabi_Extend",
+          "$project_control": "debug_screen.is_Hanabi_Extend_control"
+        }
+      },
+      {
+        "button_1@debug_screen.setting_template_button": {
+          "ignored": "$vape_panel",
+          "$setting_button_texture": "($rainbowpie_ui_path_theme + '/icon/settings/GrainReservePie/vape_v4')",
+          "$setting_button_text": "$vapeName",
+          "$project_control": "debug_screen.vape_v4_control"
+        }
+      },
+      {
+        "button_2@debug_screen.setting_template_button": {
+          "ignored": "$keystrokes_ds_control",
+          "$setting_button_texture": "($rainbowpie_ui_path_theme + '/icon/settings/GrainReservePie/keystrokes_ds')",
+          "$setting_button_text": "keystrokes.ds",
+          "$project_control": "debug_screen.keystrokes_ds_control"
+        }
+      },
+      {
+        "button_3@debug_screen.setting_template_button": {
+          "ignored": "$direction_ds_control",
+          "$setting_button_texture": "($rainbowpie_ui_path_theme + '/icon/settings/GrainReservePie/direction_ds')",
+          "$setting_button_text": "direction.ds",
+          "$project_control": "debug_screen.direction_ds_control"
+        }
+      },
+      {
+        "button_4@debug_screen.setting_template_button": {
+          "ignored": "$inventory_control",
+          "$setting_button_texture": "($rainbowpie_ui_path_theme + '/icon/settings/GrainReservePie/inventory')",
+          "$setting_button_text": "inventory.text",
+          "$project_control": "debug_screen.inventory_control"
+        }
+      }
+    ]
+  },
+
+  "masking_content_button@debug_screen.section_toggle_button": {
+    "$setup_toggle": "mask"
+  },
+  "masking_content@debug_screen.main_sections": {
+    "size": [ "100%", "100%c" ],
+    "$toggle_group_forced_index": 0,
+    "controls": [
+      { "mask_rgb_button@debug_screen.mask_rgb_button": {} },
+      { "padding_0": { "type": "panel", "size": [ 2, 2 ] } },
+      { "mask_list_0@debug_screen.mask_list_0": {} },
+      { "padding_1": { "type": "panel", "size": [ 4, 4 ] } },
+      { "mask_list_1@debug_screen.mask_list_1": {} },
+      { "padding_2": { "type": "panel", "size": [ 4, 4 ] } },
+      { "mask_list_2@debug_screen.mask_list_2": {} },
+      { "padding_3": { "type": "panel", "size": [ 4, 4 ] } }
+    ],
+    "bindings":[
+      {
+        "binding_type": "view",
+        "source_control_name": "debug_screen.mask_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "scross_content_button@debug_screen.section_toggle_button": {
+    "$setup_toggle": "scross"
+  },
+  "scross_content@debug_screen.main_sections": {
+    "size": [ "100%", "100%c" ],
+    "$toggle_group_forced_index": 0,
+    "controls": [
+      { "scross_rgb_button@debug_screen.scross_rgb_button": {} },
+      { "padding_0": { "type": "panel", "size": [ 2, 2 ] } },
+      { "scross_list_0@debug_screen.scross_list_0": {} },
+      { "padding_1": { "type": "panel", "size": [ 4, 4 ] } },
+      { "scross_list_1@debug_screen.scross_list_1": {} },
+      { "padding_2": { "type": "panel", "size": [ 4, 4 ] } },
+      { "scross_list_2@debug_screen.scross_list_2": {} },
+      { "padding_3": { "type": "panel", "size": [ 4, 4 ] } },
+      { "scross_list_3@debug_screen.scross_list_3": {} },
+      { "padding_4": { "type": "panel", "size": [ 4, 4 ] } },
+      { "scross_list_4@debug_screen.scross_list_4": {} },
+      { "padding_4": { "type": "panel", "size": [ 4, 4 ] } },
+      { "scross_list_y@debug_screen.scross_list_y": {} },
+      { "padding_5": { "type": "panel", "size": [ 4, 4 ] } }
+    ],
+    "bindings":[
+      {
+        "binding_type": "view",
+        "source_control_name": "debug_screen.False_SCross",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  //--------------------------------------------------------------------------
+  // Hud Setting
+  //--------------------------------------------------------------------------
+  "section_toggle_button": {
+    "type": "panel",
+    "layer": 2,
+    "$title_text|default": "",
+    "$section_topic|default": "",
+    "$setting_button_texture|default": "textures/PFMAXLNX/tm",
+    "controls": [
+      {
+        "mouse_background": {
+          "type": "image",
+          "texture": "textures/PFMAXLNX/tm",
+          "size": [ "100%", "100%" ],
+          "color": "$rainbowpie_ui_theme_text_background_color",
+          "alpha": "$rainbowpie_ui_theme_text_background_alpha",
+          "layer": 1,
+          "controls": [
+            {
+              "button_icon": {
+                "layer": 1,
+                "alpha": 0.8,
+                "type": "image",
+                "texture": "$setting_button_texture",
+                "size": [ 22, 22 ],
+                "offset": [ 0, 0 ],
+                "anchor_from": "center",
+                "anchor_to": "center"
+              }
+            },
+            {
+              "title": {
+                "type": "label",
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [ 0, 1 ],
+                "font_scale_factor": 1.4,
+                "text_alignment": "center",
+                "text": "$title_text",
+                "font_type": "$rainbowpie_ui_theme_global_font_name",
+                "backup_font_type": "$rainbowpie_ui_theme_global_font_name_backup",
+                "layer": 1
+              }
+            },
+            {
+              "section_toggle_button@common_toggles.light_ui_toggle": {
+                "$button_type_panel": "common_buttons.new_ui_binding_button_label",
+                "$unchecked_control": "rainbowpie_ui_toggle.toggle_tab_unchecked",
+                "$checked_control": "rainbowpie_ui_toggle.toggle_tab_checked",
+                "$unchecked_hover_control": "rainbowpie_ui_toggle.toggle_tab_unchecked_hover",
+                "$checked_hover_control": "rainbowpie_ui_toggle.toggle_tab_checked_hover",
+                "$unchecked_locked_control": "rainbowpie_ui_toggle.toggle_tab_unchecked_locked",
+                "$unchecked_locked_hover_control": "rainbowpie_ui_toggle.toggle_tab_unchecked_locked_hover",
+                "$checked_locked_control": "rainbowpie_ui_toggle.toggle_tab_checked_locked",
+                "$checked_locked_hover_control": "rainbowpie_ui_toggle.toggle_tab_checked_locked_hover",
+                "$button_text": "",
+                "layer": -10,
+                "$radio_toggle_group": true,
+                "$toggle_name": "$setup_toggle",
+                "$toggle_group_default_selected": "$default_selector_toggle_index",
+
+                "$toggle_tab_focus_binding_type": "global",
+                "$toggle_tab_focus_binding_name": "#navigation_tab_focus_precedence",
+                "$toggle_on_hover_binding_type": "global",
+                "$toggle_on_hover_binding_name": "#toggle_on_hover",
+
+                "$toggle_view_binding_name": "($section_topic + '_button_toggle')"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "transparent_template_button": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "layer": 1,
+    "controls": [
+      {
+        "title": {
+          "type": "label",
+          "size": [ "100% - 58px", 14 ],
+          "offset": [ 0, 1 ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "font_scale_factor": 1.4,
+          "text_alignment": "center",
+          "text": "$button_text",
+          "font_type": "$rainbowpie_ui_theme_global_font_name",
+          "backup_font_type": "$rainbowpie_ui_theme_global_font_name_backup",
+          "alpha": 0.8,
+          "layer": 20
+        }
+      },
+      {
+        "play_button@settings_common.option_toggle": {
+          "layer": 1,
+          "size": [ "100%", "100%" ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "$pressed_button_name": "null",
+          "$control_name": "$project_control",
+          "$option_label": ""
+        }
+      },
+      {
+        "debug01@rainbowpie_ui_common.debug_draw": {
+          "$rainbowpie_localui_debug_name": "Test"
+        }
+      }
+    ]
+  },
+
+  "setting_template_button": {
+    "type": "panel",
+    "size": [ "100%", 30 ],
+    "layer": 1,
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "size": [ "100%", 26 ],
+          "alpha": 0.4,
+          "layer": 1,
+          "controls": [
+            {
+              "button_icon": {
+                "layer": 1,
+                "alpha": 0.8,
+                "type": "image",
+                "texture": "$setting_button_texture",
+                "size": [ 22, 22 ],
+                "offset": [ 2, 0 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle"
+              }
+            },
+            {
+              "title": {
+                "type": "label",
+                "size": [ "100% - 58px", 14 ],
+                "offset": [ 28, 1 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "font_scale_factor": 1.4,
+                "text_alignment": "left",
+                "text": "$setting_button_text",
+                "font_type": "$rainbowpie_ui_theme_global_font_name",
+                "backup_font_type": "$rainbowpie_ui_theme_global_font_name_backup",
+                "alpha": 0.8,
+                "layer": 1
+              }
+            },
+            {
+              "play_button@settings_common.option_toggle": {
+                "layer": 1,
+                "size": [ 26, 26 ],
+                "offset": [ -10, 2 ],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "$pressed_button_name": "null",
+                "$control_name": "$project_control",
+                "$option_label": ""
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "hud_main_panel": {
+    "type": "panel",
+    "layer": 100,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "debug_screen.hud_setting_control",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "modal_input@common.input_panel": {
+          "layer": 100,
+          "controls": [
+            {
+              "＆0@debug_screen.hud_setting_content": {}
+            },
+            {
+              "background@rainbowpie_ui_common.global_background": {
+                "size": [ "100%", "100%" ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "main_sections": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "center",
+    "anchor_to": "center"
+  },
+
+  "mask_slider@debug_screen.main_sections": {
+    "orientation": "vertical",
+    "controls": [
+      {
+        "panel": {
+          "type": "panel",
+          "controls": [
+            {
+              "mask_alpha_slider@debug_screen.option_slider": {
+                "$text_0": "0.0",
+                "$text_1": "0.1",
+                "$text_2": "0.2",
+                "$text_3": "0.3",
+                "$text_4": "0.4",
+                "$text_5": "0.5",
+                "$text_6": "0.6",
+                "$text_7": "0.7",
+                "$text_8": "0.8",
+                "$text_9": "0.9",
+                "$text_10": "1.0",
+                "$slider_source_property_name": "((#slider_value + 0.6) * 10)",
+                "$slider_text_source_control_name": "mask_alpha_slider",
+                "property_bag": {
+                  "#slider_steps": 11
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "option_slider@common.slider": {
+    "layer": 1,
+    "offset": [0,0],
+    "size": [ "80%", 16 ],
+    "$text_0|default": "",
+    "$text_1|default": "",
+    "$text_2|default": "",
+    "$text_3|default": "",
+    "$text_4|default": "",
+    "$text_5|default": "",
+    "$text_6|default": "",
+    "$text_7|default": "",
+    "$text_8|default": "",
+    "$text_9|default": "",
+    "$text_10|default": "",
+    "$slider_name": "mask_slider",
+    "$slider_source_property_name|default": "",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "bindings": [
+      {
+        "binding_name": "#slider_steps",
+        "binding_name_override": "#slider_steps"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "option_slider",
+        "source_property_name": "$slider_source_property_name",
+        "target_property_name": "#slider_value"
+      }
+    ],
+    "controls": [
+      {
+        "slider_box@common.slider_box": {
+          "$slider_box_layout": "rainbowpie_ui_common.slider_button_layout",
+          "$slider_box_hover_layout": "rainbowpie_ui_common.slider_button_hover_layout",
+          "$slider_box_locked_layout": "rainbowpie_ui_common.slider_button_locked_layout",
+          "$slider_box_indent_layout": "rainbowpie_ui_common.slider_button_indent_layout",
+          "$slider_box_size":"$slider_box_size",
+          "$slider_track_button": "$slider_name"
+        }
+      },
+      {
+        "slider_bar_default@common.slider_bar_default": {
+          "$background_control": "rainbowpie_ui_common.slider_background",
+          "$progress_control": "rainbowpie_ui_common.slider_progress"
+        }
+      },
+      {
+        "slider_bar_hover@common.slider_bar_hover": {
+          "$background_control": "rainbowpie_ui_common.slider_background_hover",
+          "$progress_control": "rainbowpie_ui_common.slider_progress_hover"
+        }
+      },
+      { "00@debug_screen.slider_control_text": {"$slider_text_source_property_name": "(#slider_value = 0)","text": "$text_0"}},
+      { "01@debug_screen.slider_control_text": {"$slider_text_source_property_name": "(#slider_value = 1)","text": "$text_1"}},
+      { "02@debug_screen.slider_control_text": {"$slider_text_source_property_name": "(#slider_value = 2)","text": "$text_2"}},
+      { "03@debug_screen.slider_control_text": {"$slider_text_source_property_name": "(#slider_value = 3)","text": "$text_3"}},
+      { "04@debug_screen.slider_control_text": {"$slider_text_source_property_name": "(#slider_value = 4)","text": "$text_4"}},
+      { "05@debug_screen.slider_control_text": {"$slider_text_source_property_name": "(#slider_value = 5)","text": "$text_5"}},
+      { "06@debug_screen.slider_control_text": {"$slider_text_source_property_name": "(#slider_value = 6)","text": "$text_6"}},
+      { "07@debug_screen.slider_control_text": {"$slider_text_source_property_name": "(#slider_value = 7)","text": "$text_7"}},
+      { "08@debug_screen.slider_control_text": {"$slider_text_source_property_name": "(#slider_value = 8)","text": "$text_8"}},
+      { "09@debug_screen.slider_control_text": {"$slider_text_source_property_name": "(#slider_value = 9)","text": "$text_9"}},
+      { "10@debug_screen.slider_control_text": {"$slider_text_source_property_name": "(#slider_value = 10)","text": "$text_10"}}
+    ]
+  },
+
+  "slider_control_text": {
+    "type": "label",
+    "layer": 100,
+    "shadow": false,
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_name_backup",
+    "localize": "$slider_control_text_localize",
+    "offset": "$slider_control_text_offset",
+    "$slider_control_text_localize|default": false,
+    "$slider_control_text_offset|default": [0,0],
+    "$slider_text_source_control_name|default": "",
+    "$slider_text_source_property_name|default": "",
+    "$slider_text_target_property_name|default": "#visible",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$slider_text_source_control_name",
+        "source_property_name": "$slider_text_source_property_name",
+        "target_property_name": "$slider_text_target_property_name"
+      }
+    ]
+  },
+
+  //--------------------------------------------------------------------------
+  // Function Button
+  //--------------------------------------------------------------------------
+  "hud_setting_control@settings_common.option_toggle_control": {
+    "$unchecked_control": "debug_screen.button_default",
+    "$checked_control": "debug_screen.button_default",
+    "$unchecked_hover_control": "debug_screen.button_default",
+    "$checked_hover_control": "debug_screen.button_default",
+    "$toggle_name": "debug_screen.hud_setting_toggle",
+    "$option_binding_name": "#hud_settings"
+  },
+  "hud_setting_toggle@debug_screen.transparent_template_button": {
+    "$project_control": "debug_screen.hud_setting_control",
+    "$button_text": ""
+  },
+  "hud_setting_close_control@settings_common.option_toggle_control": {
+    "$unchecked_control": "debug_screen.button_default",
+    "$checked_control": "debug_screen.button_default",
+    "$unchecked_hover_control": "debug_screen.button_default",
+    "$checked_hover_control": "debug_screen.button_default",
+    "$toggle_name": "debug_screen.hud_setting_close_toggle",
+    "$option_binding_name": "#hud_settings"
+  },
+  "hud_setting_close_toggle@debug_screen.transparent_template_button": {
+    "$project_control": "debug_screen.hud_setting_close_control",
+    "$button_text": ""
+  },
+
+  //隐藏title
+  "hide_title_control@settings_common.option_toggle_control": {
+    "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off",
+    "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on",
+    "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_hover",
+    "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_hover",
+    "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$toggle_name": "hide_title_toggle",
+    "$option_binding_name": "#hide_control"
+  },
+  //聊天栏
+  "hide_chat_control@settings_common.option_toggle_control": {
+    "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off",
+    "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on",
+    "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_hover",
+    "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_hover",
+    "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$toggle_name": "hide_chat_toggle",
+    "$option_binding_name": "#hide_control"
+  },
+  //水印
+  "False_Toolbox@settings_common.option_toggle_control": {
+    "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off",
+    "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on",
+    "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_hover",
+    "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_hover",
+    "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$toggle_name": "Toolbox_toggle",
+    "$option_binding_name": "#icon_control"
+  },
+  //准心
+  "False_SCross@settings_common.option_toggle_control": {
+    "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off",
+    "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on",
+    "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_hover",
+    "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_hover",
+    "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$toggle_name": "SCross_toggle",
+    "$option_binding_name": "#icon_control"
+  },
+  "scross_rgb_control@settings_common.option_toggle_control": {
+    "$unchecked_control": "debug_screen.toggle_unchecked",
+    "$checked_control": "debug_screen.toggle_checked_locked",
+    "$unchecked_hover_control": "debug_screen.toggle_unchecked_hover",
+    "$checked_hover_control": "debug_screen.toggle_checked_locked_hover",
+    "$unchecked_locked_control": "debug_screen.toggle_unchecked_locked",
+    "$unchecked_locked_hover_control": "debug_screen.toggle_unchecked_locked_hover",
+    "$checked_locked_control": "debug_screen.toggle_tab_checked_locked",
+    "$checked_locked_hover_control": "debug_screen.toggle_checked_locked_hover",
+    "$toggle_name": "scross_rgb_toggle",
+    "$option_binding_name": "#icon_control"
+  },
+  //mask
+  "mask_button_toggle@settings_common.option_toggle_control": {
+    "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off",
+    "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on",
+    "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_hover",
+    "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_hover",
+    "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$toggle_name": "mask_toggle",
+    "$option_binding_name": "#icon_control"
+  },
+  //计分板
+  "scoreboard_hide_control@settings_common.option_toggle_control": {
+    "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off",
+    "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on",
+    "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_hover",
+    "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_hover",
+    "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$toggle_name": "scoreboard_hide_toggle",
+    "$option_binding_name": "#hide_control"
+  },
+  //指南针 钟
+  "compass_and_clock_control@settings_common.option_toggle_control": {
+    "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off",
+    "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on",
+    "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_hover",
+    "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_hover",
+    "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$toggle_name": "compass_and_clock_toggle",
+    "$option_binding_name": "#hide_control"
+  },
+  //Hanabi拓展显示
+  "is_Hanabi_Extend_control@settings_common.option_toggle_control": {
+    "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off",
+    "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on",
+    "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_hover",
+    "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_hover",
+    "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$toggle_name": "is_Hanabi_Extend_toggle",
+    "$option_binding_name": "#is_Hanabi_Extend"
+  },
+  //keystrokes按键
+  "keystrokes_ds_control@settings_common.option_toggle_control": {
+    "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off",
+    "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on",
+    "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_hover",
+    "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_hover",
+    "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$toggle_name": "keystrokes_ds_toggle",
+    "$option_binding_name": "#keystrokes_ds"
+  },
+  //Direction方向
+  "direction_ds_control@settings_common.option_toggle_control": {
+    "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off",
+    "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on",
+    "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_hover",
+    "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_hover",
+    "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$toggle_name": "direction_ds_toggle",
+    "$option_binding_name": "#direction_ds"
+  },
+  //inventory
+  "inventory_control@settings_common.option_toggle_control": {
+    "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off",
+    "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on",
+    "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_hover",
+    "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_hover",
+    "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$toggle_name": "inventory_toggle",
+    "$option_binding_name": "#inventory"
+  },
+  //info
+  "info_switch_control@settings_common.option_toggle_control": {
+    "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off",
+    "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on",
+    "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_hover",
+    "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_hover",
+    "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$toggle_name": "info_switch_toggle",
+    "$option_binding_name": "#info_switch"
+  },
+  //Armour display
+  "hide_armor_held_control@settings_common.option_toggle_control": {
+    "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off",
+    "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on",
+    "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_hover",
+    "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_hover",
+    "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$toggle_name": "hide_armor_held_toggle",
+    "$option_binding_name": "#hide_armor_held_switch"
+  },
+  //hotbar items durability
+  "items_durability_control@settings_common.option_toggle_control": {
+    "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off",
+    "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on",
+    "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_hover",
+    "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_hover",
+    "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$toggle_name": "items_durability_toggle",
+    "$option_binding_name": "#items_durability_switch"
+  },
+  //hotbar items Block
+  "items_block_control@settings_common.option_toggle_control": {
+    "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off",
+    "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on",
+    "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_hover",
+    "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_hover",
+    "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$toggle_name": "items_block_toggle",
+    "$option_binding_name": "#items_block_switch"
+  },
+  //vape
+  "vape_v4_control@settings_common.option_toggle_control": {
+    "$unchecked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off",
+    "$checked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on",
+    "$unchecked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_hover",
+    "$checked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_hover",
+    "$unchecked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$unchecked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_off_locked",
+    "$checked_locked_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$checked_locked_hover_control": "rainbowpieui_settings_common.rainbowpie_ui_option_toggle_on_locked",
+    "$toggle_name": "vape_v4_toggle",
+    "$option_binding_name": "#vape_v4"
+  }
+
+}

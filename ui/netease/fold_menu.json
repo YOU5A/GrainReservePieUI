@@ -1,0 +1,173 @@
+{
+  "namespace": "fold_menu",
+
+  "fold_background": {
+    "type": "image",
+    "texture": "textures/ui/Black",
+    "alpha": 0.4244749079,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [ "200%", "200%" ],
+    "layer": 3
+  },
+
+  "fold_menu_image": {
+    "type": "image",
+    "layer": 2,
+    "texture": "textures/ui/Black",
+    "size": [ "default", 18 ],
+    "max_size": [ "100%", "100%" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "alpha": 0.5,
+    "controls": [
+      {
+         "fold_menu_text": {
+           "type": "label",
+           "color": [ 0.333, 0.333, 1.0 ],
+           "layer": 1,
+           "text": "  by PFMAXLNX  ",
+           "size": [ "100%", "default" ],
+           "font_scale_factor": 1.50,
+           "anchor_from": "right_middle",
+           "anchor_to": "right_middle",
+           "text_alignment": "right",
+           "font_type": "MinecraftTen"
+        }
+      }
+    ]
+  },
+
+  "button_1_icon": {
+    "type": "image",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "texture": "textures/netease/voice_trans/icon06@3x",
+    "size": [ 27, 27 ],
+    "layer": 3
+  },
+
+  "button_2_icon": {
+    "type": "image",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "texture": "textures/netease/voice_trans/icon04@3x",
+    "size": [ 27, 27 ],
+    "layer": 3
+  },
+
+  "button_3_icon": {
+    "type": "image",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "texture": "textures/netease/voice_trans/icon05@3x",
+    "size": [ 27, 27 ],
+    "layer": 3
+  },
+
+  "fold_menu_dialog_screen@fold_menu.fold_menu_screen": {},
+
+  "fold_menu_screen@common.base_screen" : {
+    "$screen_content": "fold_menu.Salute_PF_Fold_Menu",
+    "force_render_below": true,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.fold_menu_close",
+        "mapping_type": "global"
+      }
+    ]
+  },
+
+  "Salute_PF_Fold_Menu": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "controls": [
+      { "fold_background@fold_menu.fold_background": {} },
+      { "fold_menu_image@fold_menu.fold_menu_image": {} },
+      {
+        "exit_button@common_buttons.invisible_close_button": {
+          "size": [ "100%", "100%" ],
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "$pressed_button_name": "button.fold_menu_close",
+          "layer": -1
+        }
+      },
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "size": [ 77, "80%" ],
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "controls": [
+            {
+              "button_voice@common_buttons.light_text_button": {
+                "$button_text": "fold_menu.set",
+                "size": [ 77, 26 ],
+                "$pressed_button_name": "button.fold_menu_speechsetting",
+                "bindings": [
+                  {
+                    "binding_name": "#fold_menu_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "looking_button_panel": {
+                "type": "stack_panel",
+                "orientation":  "horizontal",
+                "size": [ 77, 26 ],
+                "controls": [
+                  {
+                    "button_1@common_buttons.light_content_button": {
+                      "$button_content": "fold_menu.button_1_icon",
+                      "size": [ 25, 26 ],
+                      "$pressed_button_name": "button.fold_menu_firstpersion"
+                    }
+                  },
+                  {
+                    "lk_button_padding_1": {
+                      "type": "panel",
+                      "size": [ 1, 1 ]
+                    }
+                  },
+                  {
+                    "button_2@common_buttons.light_content_button": {
+                      "$button_content": "fold_menu.button_2_icon",
+                      "size": [ 25, 26 ],
+                      "$pressed_button_name": "button.fold_menu_thirdpersonfront"
+                    }
+                  },
+                  {
+                    "lk_button_padding_2": {
+                      "type": "panel",
+                      "size": [ 1, 1 ]
+                    }
+                  },
+                  {
+                    "button_3@common_buttons.light_content_button": {
+                      "$button_content": "fold_menu.button_3_icon",
+                      "size": [ 25, 26 ],
+                      "$pressed_button_name": "button.fold_menu_thirdpersion"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "button_close@common_buttons.light_text_button": {
+                "$button_text": "gui.back",
+                "size": [ 77, 26 ],
+                "$pressed_button_name": "button.fold_menu_close"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

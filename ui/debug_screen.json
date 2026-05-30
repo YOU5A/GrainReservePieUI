@@ -1,0 +1,33 @@
+
+{
+  "namespace": "debug_screen",
+
+  "content_panel": {
+    "type": "panel",
+    "clips_children": false,
+    "size": [ "100%", "100%" ],
+    "controls": [
+      //Common
+      { "Test@debug_screen.dev_pack_info":{} },
+      { "Watermarks@debug_screen.grain_reserve_text":{ "ignored": "(not $Hanabi_panel)" } },
+      { "Logo@debug_screen.logo_screen": {} },
+      { "Compass_clocks@debug_screen.compass_clock":{} },
+      { "pack_info@debug_screen.pack_info_panel":{} },
+      //hud settings
+      { "Panel@debug_screen.hud_main_panel": {} },
+      { "Cross@debug_screen.cross_image_control": {} },
+      { "Mask@debug_screen.masking_image":{} },
+      //Special modes
+      { "VAPE@debug_screen.VAPE_V4": {} }
+    ]
+  },
+
+  "debug_screen@common.base_screen": {
+   // "$use_loading_bars": false,
+   // "$rainbowpie_localui_screen_watermark": false,
+   // "$rainbowpie_localui_modified": true,
+   // "always_accepts_input": true,
+   // "render_only_when_topmost": "(not $desktop_screen)",
+    "$screen_content": "debug_screen.content_panel"
+  }
+}

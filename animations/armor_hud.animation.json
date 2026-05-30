@@ -1,0 +1,37 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.helmet": {
+      "loop": true,
+      "bones": {
+        "helmet_rend": {
+          "position": [ -58, "query.is_swimming ? -919.5 : -900", 0 ]
+        }
+      }
+    },
+    "animation.chestplate": {
+      "loop": true,
+      "bones": {
+        "chestplate_rend": {
+          "position": [ -44, "query.is_swimming ? -919.5 : -900", 0 ]
+        }
+      }
+    },
+    "animation.leggings": {
+      "loop": true,
+      "bones": {
+        "leggings_rend": {
+          "position": [ -30, "query.is_swimming ? -919.5 : -900", 0 ]
+        }
+      }
+    },
+    "animation.boots": {
+      "loop": true,
+      "bones": {
+        "boots_rend": {
+          "position": [ -16, "query.is_swimming ? -919.5 : -900", 0 ]
+        }
+      }
+    }
+  }
+}

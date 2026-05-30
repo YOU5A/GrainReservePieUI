@@ -1,0 +1,202 @@
+{
+ "format_version": "1.8.0",
+ "render_controllers": {
+  "controller.render.player.third_person": {
+   "geometry": "Geometry.default",
+   "materials": [
+    {"*": "Material.default"}
+   ],
+   "textures": [
+    "Texture.default"
+   ],
+   "part_visibility": [
+    {"*": true},
+    {"helmet": "variable.helmet_layer_visible"},
+    {"leftLegging": "variable.leg_layer_visible"},
+    {"rightLegging": "variable.leg_layer_visible"},
+    {"leftBoot": "variable.boot_layer_visible"},
+    {"rightBoot": "variable.boot_layer_visible"},
+    {"leftSock": "variable.boot_layer_visible && variable.leg_layer_visible"},
+    {"rightSock": "variable.boot_layer_visible && variable.leg_layer_visible"},
+    {"bodyArmor": "variable.chest_layer_visible && !query.has_cape"},
+    {"leftArmArmor": "variable.chest_layer_visible && !query.has_cape"},
+    {"rightArmArmor": "variable.chest_layer_visible && !query.has_cape"},
+    {"belt": "variable.chest_layer_visible && variable.leg_layer_visible"}
+   ]
+  },
+  "controller.render.custom": {
+   "geometry": "Geometry.custom",
+   "materials": [
+    {"*": "Material.default"}
+   ],
+   "textures": [
+    "Texture.default"
+   ],
+   "part_visibility": [
+    {"*": true},
+    {"helmet": "variable.helmet_layer_visible"},
+    {"leftLegging": "variable.leg_layer_visible"},
+    {"rightLegging": "variable.leg_layer_visible"},
+    {"leftBoot": "variable.boot_layer_visible"},
+    {"rightBoot": "variable.boot_layer_visible"},
+    {"leftSock": "variable.boot_layer_visible && variable.leg_layer_visible"},
+    {"rightSock": "variable.boot_layer_visible && variable.leg_layer_visible"},
+    {"bodyArmor": "variable.chest_layer_visible && !query.has_cape"},
+    {"leftArmArmor": "variable.chest_layer_visible && !query.has_cape"},
+    {"rightArmArmor": "variable.chest_layer_visible && !query.has_cape"},
+    {"belt": "variable.chest_layer_visible && variable.leg_layer_visible"}
+   ]
+  },
+  "controller.render.keystrokes_space": {
+   "geometry": "Geometry.space",
+   "materials": [
+    {"*": "Material.entity_alphablend"}
+   ],
+   "textures": [
+    "Texture.key_default"
+   ],
+   "part_visibility": [
+    {"*": true}
+   ],
+   "uv_anim": {
+    "offset": [0,0],
+    "scale": [1,1]},
+   "is_hurt_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": "v.jump_blend"},
+   "on_fire_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": "v.jump_blend"},
+   "overlay_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": "v.jump_blend"}
+  },
+  "controller.render.keystrokes_lmb": {
+   "geometry": "Geometry.lmb",
+   "materials": [
+    {"*": "Material.entity_alphablend"}
+   ],
+   "textures": [
+    "Texture.key_default"
+   ],
+   "part_visibility": [
+    {"*": true}
+   ],
+   "uv_anim": {
+    "offset": [0,0],
+    "scale": [1,1]
+   },
+   "is_hurt_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": "v.lmb_mix_blend == 1.0 ? v.lmb_blend_mix : v.lmb_blend"},
+   "on_fire_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": "v.lmb_mix_blend == 1.0 ? v.lmb_blend_mix : v.lmb_blend"},
+   "overlay_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": "v.lmb_mix_blend == 1.0 ? v.lmb_blend_mix : v.lmb_blend"}
+  },
+  "controller.render.keystrokes_rmb": {
+   "geometry": "Geometry.rmb",
+   "materials": [
+    {"*": "Material.entity_alphablend"}
+   ],
+   "textures": [
+    "Texture.key_default"
+   ],
+   "part_visibility": [
+    {"*": true}
+   ],
+   "uv_anim": {
+    "offset": [0,0],
+    "scale": [1,1]
+   },
+   "is_hurt_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": "v.rmb_mix_blend_block == 1.0 ? v.rmb_blend_mix_block : v.rmb_blend"},
+   "on_fire_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": "v.rmb_mix_blend_block == 1.0 ? v.rmb_blend_mix_block : v.rmb_blend"},
+   "overlay_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": "v.rmb_mix_blend_block == 1.0 ? v.rmb_blend_mix_block : v.rmb_blend"}
+  },
+  "controller.render.keystrokes_w": {
+   "geometry": "Geometry.w",
+   "materials": [
+    {"*": "Material.entity_alphablend"}
+   ],
+   "textures": [
+    "Texture.key_default"
+   ],
+   "part_visibility": [
+    {"*": true}
+   ],
+   "uv_anim": {
+    "offset": [0,0],
+    "scale": [1,1]
+   },
+   "is_hurt_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": "v.w_blend"},
+   "on_fire_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": "v.w_blend"},
+   "overlay_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": "v.w_blend"}
+  },
+  "controller.render.keystrokes_a": {
+   "geometry": "Geometry.a",
+   "materials": [
+    {"*": "Material.entity_alphablend"}
+   ],
+   "textures": [
+    "Texture.key_default"
+   ],
+   "part_visibility": [
+    {"*": true}
+   ],
+   "uv_anim": {
+    "offset": [0,0],
+    "scale": [1,1]
+   },
+   "is_hurt_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": "v.a_blend"},
+   "on_fire_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": "v.a_blend"},
+   "overlay_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": "v.a_blend"}
+  },
+  "controller.render.keystrokes_s": {
+   "geometry": "Geometry.s",
+   "materials": [
+    {"*": "Material.entity_alphablend"}
+   ],
+   "textures": [
+    "Texture.key_default"
+   ],
+   "part_visibility": [
+    {"*": true}
+   ],
+   "uv_anim": {
+    "offset": [0,0],
+    "scale": [1,1]
+   },
+   "is_hurt_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": "v.s_blend"},
+   "on_fire_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": "v.s_blend"},
+   "overlay_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": "v.s_blend"}
+  },
+  "controller.render.keystrokes_d": {
+   "geometry": "Geometry.d",
+   "materials": [
+    {"*": "Material.entity_alphablend"}
+   ],
+   "textures": [
+    "Texture.key_default"
+   ],
+   "part_visibility": [
+    {"*": true}
+   ],
+   "uv_anim": {
+    "offset": [0,0],
+    "scale": [1,1]
+   },
+   "is_hurt_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": "v.d_blend"},
+   "on_fire_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": "v.d_blend"},
+   "overlay_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": "v.d_blend"}
+  },
+  "controller.render.keystrokes_p": {
+   "geometry": "Geometry.p",
+   "materials": [
+    {"*": "Material.entity_alphablend"}
+   ],
+   "textures": [
+    "Texture.key_default"
+   ],
+   "part_visibility": [
+    {"*": true}
+   ],
+   "uv_anim": {
+    "offset": [0,0],
+    "scale": [1,1]
+   },
+   "is_hurt_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": 0.0},
+   "on_fire_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": 0.0},
+   "overlay_color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": 0.0}
+  }
+ }
+}

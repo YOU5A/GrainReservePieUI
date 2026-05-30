@@ -1,0 +1,41 @@
+{
+    "format_version" : 1,
+    "header" : {
+      "description": "Minecraft UI Pack",
+      "name": "GrainReserve Pie UI",
+      "uuid" : "cdcabede-053d-4b91-bd41-e1ca9b1bc3d5",
+      "version": [ 1, 1, 0 ],
+      "min_engine_version": [ 1, 1, 0 ]
+    },
+    "modules" : [
+      {
+        "type" : "resources",
+        "uuid" : "adc566c0-b2ce-4047-bab1-e9c4bfa68629",
+        "version" : [ 1, 1, 0 ]
+      }
+    ],
+    "settings": [
+      {
+          "type": "label",
+          "text": "Design by PFMAXLNX\n\nbilibili: https://space.bilibili.com/353017137"
+      }
+    ],
+    "subpacks":[
+      {
+        "folder_name":"FPS Modules",
+        "name":"Display FPS plugin at the top of the screen\n开启FPS显示并关闭材质包",
+        "memory_tier": 2
+      },
+      {
+        "folder_name":"Resource Pack Closure",
+        "name":"Close the resource pack you can add other\n关闭材质包",
+        "memory_tier": 1
+      },
+      {
+        "folder_name":"Resource Pack Opening",
+        "name":"UI Default Resource Pack\n加载材质包",
+        "memory_tier": 0
+      }
+    ]
+  
+  }

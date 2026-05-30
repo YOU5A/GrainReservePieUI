@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.particle": {
+      "initial_state": "default",
+      "states": {
+        "off": {
+          "transitions": [ { "on": "!query.is_in_ui && ((query.target_x_rotation == query.camera_rotation(0)) || (query.target_x_rotation == -query.camera_rotation(0))) && ! query.target_x_rotation == 0" } ]
+          //"transitions": [ { "on": "variable.is_paperdoll || (variable.render == 1.0 && !variable.is_first_person)" } ]
+        },
+        "on": {
+          "particle_effects": [ { "effect": "particle", "locator": "head" } ],
+          "transitions": [ { "off": "query.target_x_rotation == 0" } ]
+        }
+      }
+    }
+  }
+}

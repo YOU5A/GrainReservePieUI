@@ -1,0 +1,167 @@
+{
+  "namespace": "report",
+
+  "top_bar_panel": {
+    "type": "panel",
+    "size": [ "100%", 23 ],
+
+    "controls": [
+      {
+        "header@common_store.store_top_bar": {
+          "offset": "@permissions.top_bar_animation",
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "layer": 3,
+          "controls": [
+            {
+              "title_panel": {
+                "type": "panel",
+                "size": [ "100%", 19 ],
+                "controls": [
+                  {
+                    "title_label": {
+                      "type": "label",
+                      "text": "netease.report.title",
+                      "font_type": "smooth",
+                      "size": [ "100%", 10 ],
+                      "offset": [ 20, -1 ],
+                      "anchor_to": "middle_left",
+                      "anchor_from": "middle_left",
+                      "color": [ 0.3, 0.3, 0.3 ],
+                      "layer": 2
+                    }
+                  },
+                  {
+                    "back_button_content_panel@chat.back_content_panel": {
+                      "offset": [ 2, 0 ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "content_panel": {
+    "type": "panel",
+    "size": [ "default", "fill" ],
+    "controls": [
+      {
+        "content_stack_panel": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "88%", "100%" ],
+          "controls": [
+            {
+              "content_padding_1": {
+                "type": "panel",
+                "size": [ "100%", 4 ]
+              }
+            },
+            { "world_label@report.world_label": {} },
+            //{
+            //  "content_padding_2": {
+            //    "type": "panel",
+            //    "size": [ "100%", 4 ]
+            //  }
+            //},
+            { "player_and_report_panel@report.player_and_report_panel": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "content_area@common.modal_area_panel_base": {
+    "size": [ "fill", "95%" ],
+    "$menu_cancel_button_id": "button.back_to_selector_area",
+    "$modal_binding_name": "#content_area_focused",
+    "layer": 1,
+    "controls": [
+      {
+        "report_options_background": {
+          "type": "panel",
+          "controls": [
+            {
+              "report_options_background_image@permissions.banner_background": {
+                "size": [ "100% + 2px", "100%" ],
+                "controls": [
+                    {
+                        "report_options_panel@report.report_options_panel" : {}
+                    }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "inactive_modal_pane_fade@common.inactive_modal_pane_fade": {
+          "bindings": [
+            {
+              "binding_name": "#selector_area_focused",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "world_label": {
+    "type": "label",
+    "size": [ "default", "default" ],
+    "text": "pauseScreen.currentWorld",
+    "font_type": "smooth",
+    "color": "$main_header_text_color",
+    "layer": 1
+  },
+
+  "gamertag_label": {
+    "type": "label",
+    "color": "$main_header_text_color",
+    "text": "#gamertag",
+    "font_type": "smooth",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "layer": 2,
+    "bindings": [
+      {
+        "binding_name": "#gamertag",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection"
+      }
+    ]
+  },
+
+  "option_label": {
+    "type": "label",
+    "size": [ "50%", "default" ],
+    "text": "$option_name",
+    "font_type": "smooth",
+    "color": "$main_header_text_color",
+    "layer": 2
+  },
+
+  "chat_record_label": {
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "offset": [ -7, 0 ],
+    "type": "label",
+    "size": [ "100%-21px", "100%" ],
+    "text": "#chat_record_text",
+    "font_type": "smooth",
+    "color": "$main_header_text_color",
+    "layer": 2,
+    "bindings": [
+      {
+        "binding_name": "#chat_record_text",
+        "binding_type": "collection",
+        "binding_collection_name": "chat_record_collection"
+      }
+    ]
+  }
+}

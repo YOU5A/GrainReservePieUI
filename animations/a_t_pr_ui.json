@@ -1,0 +1,170 @@
+{
+ "format_version": "1.8.0",
+
+ "animations": {
+  "animation.t_pr_empty": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 0.585,
+   "bones": {
+    "root": {
+     "rotation": [0,0,0],
+     "position": [0,0,0],
+     "scale": [1,1,1]
+    }
+   }
+  },
+  "animation.t_pr_ui": {
+   "loop": true,
+   "bones": {
+    "keyboard": {
+     "rotation": [0,0,0],
+     "position": [-6,"query.is_swimming ? -17 + 191.2 : 191.2",0]
+    },
+    "space_model": {
+     "position": [0,-1.5,0],
+     "scale": [0.985,0.985,0.985]
+    },
+    "lmb_model": {
+     "position": [0.4,-0.75,0],
+     "scale": [1,1,1]
+    },
+    "rmb_model": {
+     "position": [-0.5,-0.75,0],
+     "scale": [1,1,1]
+    },
+    "w_model": {
+     "position": [0,0.5,0],
+     "scale": [0.99,0.99,0.99]
+    },
+    "a_model": {
+     "position": [0.5,0,0],
+     "scale": [0.99,0.99,0.99]
+    },
+    "s_model": {
+     "scale": [0.99,0.99,0.99]
+    },
+    "d_model": {
+     "position": [-0.5,0,0],
+     "scale": [0.99,0.99,0.99]
+    },
+    "progress_bar": {
+     "position": [-0.5,0,0],
+     "scale": 0.0001
+    }
+   }
+  },
+  "animation.t_pr_ui_rotation": {
+   "loop": true,
+   "bones": {
+    "wasd_model": {
+     "rotation": [0,0,"v.t_pr_rotation"],
+     "position": [0,0,0]
+    },
+    "d_model": {
+     "rotation": [0,0,0],
+     "position": ["v.t_pr_rotation == 90 ? -17.5 : 0",0,0]
+    },
+    "s_model": {
+     "rotation": [0,0,0],
+     "position": [0,"v.t_pr_rotation == 90 ? -17.5 : 0",0]
+    },
+    "w_model": {
+     "rotation": [0,0,0],
+     "position": [0,"v.t_pr_rotation == 180 ? -17.5 : 0",0]
+    },
+    "S_model": {
+     "rotation": [0,0,0],
+     "position": [0,"v.t_pr_rotation == 180 ? -17.5 : 0",0]
+    },
+    "a_model": {
+     "rotation": [0,0,0],
+     "position": ["v.t_pr_rotation == -90 ? 17.5 : 0",0,0]
+    },
+    "S_Model": {
+     "rotation": [0,0,0],
+     "position": [0,"v.t_pr_rotation == -90 ? -17.5 : 0",0]
+    },
+    "w_Model": {
+     "rotation": [0,0,0],
+     "position": [0,"v.t_pr_rotation == -180 ? -17.5 : 0",0]
+    },
+    "S_MOdel": {
+     "rotation": [0,0,0],
+     "position": [0,"v.t_pr_rotation == -180 ? -17.5 : 0",0]
+    }
+   }
+  },
+  "animation.t_pr_jump_dynamic": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 1,
+   "bones": {
+    "space_model": {
+     "scale": "(v.t_pr_jump_dynamic_size_enter + (1 - math.pow((1 - math.min(q.anim_time * 0.75, 1)), 6)) * (v.t_pr_jump_dynamic_size_appear - v.t_pr_jump_dynamic_size_enter)) * 1"
+    }
+   }
+  },
+  "animation.t_pr_lmb_dynamic": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 1,
+   "bones": {
+    "lmb_model": {
+     "scale": "v.lmb == 0.0 ? (v.t_pr_lmb_dynamic_size_enter + (1 - math.pow((1 - math.min(q.anim_time * 0.75, 1)), 6)) * (v.t_pr_lmb_dynamic_size_appear - v.t_pr_lmb_dynamic_size_enter + 0.005)) * 1 : (v.t_pr_lmb_dynamic_size_enter + (1 - math.pow((1 - math.min(variable.attack_time * 0.65, 1)), 6)) * (v.t_pr_lmb_dynamic_size_appear - v.t_pr_lmb_dynamic_size_enter)) * 1"
+    }
+   }
+  },
+  "animation.t_pr_rmb_dynamic": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 1,
+   "bones": {
+    "rmb_model": {
+     "scale": "v.rmb_block == 0.0 || query.is_using_item ? (v.t_pr_rmb_dynamic_size_enter + (1 - math.pow((1 - math.min(q.anim_time * 0.65, 1)), 6)) * (v.t_pr_rmb_dynamic_size_appear - v.t_pr_rmb_dynamic_size_enter)) * 1 : (v.t_pr_lmb_dynamic_size_enter + (1 - math.pow((1 - math.min(variable.attack_time * 0.65, 1)), 6)) * (v.t_pr_lmb_dynamic_size_appear - v.t_pr_lmb_dynamic_size_enter)) * 1"
+    }
+   }
+  },
+  "animation.t_pr_p_dynamic": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 2,
+   "bones": {
+    "progress_bar": {
+     "scale": "(0.0 + (1 - math.pow((1 - math.min(q.anim_time * 0.25, 1)), 6)) * 0.95) * 10000"
+    }
+   }
+  },
+  "animation.t_pr_w_dynamic": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 2,
+   "bones": {
+    "w_model": {
+     "scale": "(v.t_pr_w_dynamic_size_enter + (1 - math.pow((1 - math.min(q.anim_time * v.t_pr_w_dynamic_time_enter, 1)), 6)) * (v.t_pr_w_dynamic_size_appear - v.t_pr_w_dynamic_size_enter)) * 1"
+    }
+   }
+  },
+  "animation.t_pr_a_dynamic": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 2,
+   "bones": {
+    "a_model": {
+     "scale": "(v.t_pr_a_dynamic_size_enter + (1 - math.pow((1 - math.min(q.anim_time * v.t_pr_a_dynamic_time_enter, 1)), 6)) * (v.t_pr_a_dynamic_size_appear - v.t_pr_a_dynamic_size_enter)) * 1"
+    }
+   }
+  },
+  "animation.t_pr_s_dynamic": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 2,
+   "bones": {
+    "s_model": {
+     "scale": "(v.t_pr_s_dynamic_size_enter + (1 - math.pow((1 - math.min(q.anim_time * v.t_pr_s_dynamic_time_enter, 1)), 6)) * (v.t_pr_s_dynamic_size_appear - v.t_pr_s_dynamic_size_enter)) * 1"
+    }
+   }
+  },
+  "animation.t_pr_d_dynamic": {
+   "loop": "hold_on_last_frame",
+   "animation_length": 2,
+   "bones": {
+    "d_model": {
+     "scale": "(v.t_pr_d_dynamic_size_enter + (1 - math.pow((1 - math.min(q.anim_time * v.t_pr_d_dynamic_time_enter, 1)), 6)) * (v.t_pr_d_dynamic_size_appear - v.t_pr_d_dynamic_size_enter)) * 1"
+    }
+   }
+  }
+ }
+}

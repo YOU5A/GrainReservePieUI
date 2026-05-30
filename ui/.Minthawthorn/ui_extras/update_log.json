@@ -1,0 +1,13 @@
+{
+  "namespace": "pack_update",
+
+  "update": {
+    "type": "label",
+    "layer": 3,
+    "text": "$cn_update",
+    "font_type": "$rainbowpie_ui_theme_global_font_name",
+    "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+    "size": [ "100%", "default" ],
+    "$cn_update": "TEST"
+  }
+}

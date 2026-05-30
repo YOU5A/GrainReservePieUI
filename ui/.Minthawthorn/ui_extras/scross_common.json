@@ -1,0 +1,938 @@
+{
+  "namespace":"debug_screen",
+  //--------------------------------------------------------------------------
+  // scross list
+  //--------------------------------------------------------------------------
+  "scross_rgb_button":{
+    "type": "image",
+    "texture": "textures/ui/White",
+    "size": [ "100% - 2px", 22 ],
+    "alpha": 0,
+    "layer": 10,
+    "controls": [
+      {
+        "info@debug_screen.transparent_template_button": {
+          "$button_text": "mask.rgb.text",
+          "$project_control": "debug_screen.scross_rgb_control"
+        }
+      }
+    ]
+  },
+
+  "scross_list_0@debug_screen.main_sections": {
+    "size": [ "100%", 20 ],
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "scross_0":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [ 22, 22 ],
+          "alpha": 0,
+          "layer": 10,
+          "controls": [
+            {
+              "button_0@debug_screen.scross_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/0",
+                "$section_topic": "scross_0",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_1": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "scross_1":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [ 22, 22 ],
+          "alpha": 0,
+          "layer": 10,
+          "controls": [
+            {
+              "button_1@debug_screen.scross_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/1",
+                "$section_topic": "scross_1",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 1
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_2": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "scross_2":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [ 22, 22 ],
+          "alpha": 0,
+          "layer": 10,
+          "controls": [
+            {
+              "button_2@debug_screen.scross_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/2",
+                "$section_topic": "scross_2",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 2
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_4": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "scross_3":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [ 22, 22 ],
+          "alpha": 0,
+          "layer": 10,
+          "controls": [
+            {
+              "button_3@debug_screen.scross_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/3",
+                "$section_topic": "scross_3",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 3
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_4": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      }
+    ]
+  },
+
+  "scross_list_1@debug_screen.main_sections": {
+    "size": [ "100%", 20 ],
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "scross_4":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [ 22, 22 ],
+          "alpha": 0,
+          "layer": 10,
+          "controls": [
+            {
+              "button_4@debug_screen.scross_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/4",
+                "$section_topic": "scross_4",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 4
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_5": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "scross_5":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [ 22, 22 ],
+          "alpha": 0,
+          "layer": 10,
+          "controls": [
+            {
+              "button_5@debug_screen.scross_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/5",
+                "$section_topic": "scross_5",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 5
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_6": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "scross_6":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [ 22, 22 ],
+          "alpha": 0,
+          "layer": 10,
+          "controls": [
+            {
+              "button_6@debug_screen.scross_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/6",
+                "$section_topic": "scross_6",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 6
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_7": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "scross_7":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [ 22, 22 ],
+          "alpha": 0,
+          "layer": 10,
+          "controls": [
+            {
+              "button_7@debug_screen.scross_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/7",
+                "$section_topic": "scross_7",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 7
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_8": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      }
+    ]
+  },
+
+  "scross_list_2@debug_screen.main_sections": {
+    "size": [ "100%", 20 ],
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "scross_8":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [ 22, 22 ],
+          "alpha": 0,
+          "layer": 10,
+          "controls": [
+            {
+              "button_8@debug_screen.scross_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/8",
+                "$section_topic": "scross_8",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 8
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_9": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "scross_9":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [ 22, 22 ],
+          "alpha": 0,
+          "layer": 10,
+          "controls": [
+            {
+              "button_9@debug_screen.scross_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/9",
+                "$section_topic": "scross_9",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 9
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_10": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "scross_10":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [ 22, 22 ],
+          "alpha": 0,
+          "layer": 10,
+          "controls": [
+            {
+              "button_10@debug_screen.scross_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/10",
+                "$section_topic": "scross_10",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 10
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_11": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "scross_11":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [ 22, 22 ],
+          "alpha": 0,
+          "layer": 10,
+          "controls": [
+            {
+              "button_11@debug_screen.scross_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/11",
+                "$section_topic": "scross_11",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 11
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_12": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      }
+    ]
+  },
+
+  "scross_list_3@debug_screen.main_sections": {
+    "size": [ "100%", 20 ],
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "scross_12":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [ 22, 22 ],
+          "alpha": 0,
+          "layer": 10,
+          "controls": [
+            {
+              "button_12@debug_screen.scross_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/12",
+                "$section_topic": "scross_12",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 12
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_13": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "scross_13":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [ 22, 22 ],
+          "alpha": 0,
+          "layer": 10,
+          "controls": [
+            {
+              "button_13@debug_screen.scross_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/13",
+                "$section_topic": "scross_13",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 13
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_14": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "scross_14":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [ 22, 22 ],
+          "alpha": 0,
+          "layer": 10,
+          "controls": [
+            {
+              "button_14@debug_screen.scross_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/14",
+                "$section_topic": "scross_14",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 14
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_15": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "scross_15":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [ 22, 22 ],
+          "alpha": 0,
+          "layer": 10,
+          "controls": [
+            {
+              "button_15@debug_screen.scross_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/15",
+                "$section_topic": "scross_15",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 15
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_16": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      }
+    ]
+  },
+
+  "scross_list_4@debug_screen.main_sections": {
+    "size": [ "100%", 20 ],
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "scross_16":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [ 22, 22 ],
+          "alpha": 0,
+          "layer": 10,
+          "controls": [
+            {
+              "button_16@debug_screen.scross_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/16",
+                "$section_topic": "scross_16",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 16
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_17": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "scross_17":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [ 22, 22 ],
+          "alpha": 0,
+          "layer": 10,
+          "controls": [
+            {
+              "button_17@debug_screen.scross_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/17",
+                "$section_topic": "scross_17",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 17
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_18": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "scross_18":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [ 22, 22 ],
+          "alpha": 0,
+          "layer": 10,
+          "controls": [
+            {
+              "button_18@debug_screen.scross_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/18",
+                "$section_topic": "scross_18",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 18
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_1": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "scross_19":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [ 22, 22 ],
+          "alpha": 0,
+          "layer": 10,
+          "controls": [
+            {
+              "button_19@debug_screen.scross_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/19",
+                "$section_topic": "scross_19",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 19
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_1": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      }
+    ]
+  },
+
+  "scross_list_y@debug_screen.main_sections": {
+    "size": [ "100%", 20 ],
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "scross_y":{
+          "type": "image",
+          "texture": "textures/ui/White",
+          "size": [ 22, 22 ],
+          "alpha": 0,
+          "layer": 10,
+          "controls": [
+            {
+              "button_y@debug_screen.scross_content_button": {
+                "$setting_button_texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/y",
+                "$section_topic": "scross_y",
+                "$title_text": "",
+                "size": [ "100%", "100%" ],
+                "$toggle_group_forced_index": 9
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  //--------------------------------------------------------------------------
+  // scross list hud
+  //--------------------------------------------------------------------------
+  "cross_image": {
+    "type": "image",
+    "$texture|default": "textures/PFMAXLNX/tm",
+    "$color|default": [ 1,1,1 ],
+    "$anims|default": "",
+    "size": [ 12,12 ],
+    "layer": 1,
+    "alpha": 0.8,
+    "controls": [
+      {
+        "cross_image": {
+          "type": "image",
+          "texture": "$texture",
+          "color": "$color",
+          "anims": "$anims",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "debug_screen.scross_rgb_control",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "rgb_image": {
+          "type": "image",
+          "texture": "$texture",
+          "color": "$color",
+          "anims": [ "@color.rgb_color_01" ],
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "debug_screen.scross_rgb_control",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "cross_image_control": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "00@debug_screen.cross_image": {
+          "$texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/0",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "scross_0_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "01@debug_screen.cross_image": {
+          "$texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/1",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "scross_1_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "02@debug_screen.cross_image": {
+          "$texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/2",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "scross_2_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "03@debug_screen.cross_image": {
+          "$texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/3",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "scross_3_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "04@debug_screen.cross_image": {
+          "$texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/4",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "scross_4_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "05@debug_screen.cross_image": {
+          "$texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/5",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "scross_5_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "06@debug_screen.cross_image": {
+          "$texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/6",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "scross_6_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "07@debug_screen.cross_image": {
+          "$texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/7",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "scross_7_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "08@debug_screen.cross_image": {
+          "$texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/8",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "scross_8_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "09@debug_screen.cross_image": {
+          "$texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/9",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "scross_9_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "10@debug_screen.cross_image": {
+          "$texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/10",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "scross_10_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "11@debug_screen.cross_image": {
+          "$texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/11",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "scross_11_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "12@debug_screen.cross_image": {
+          "$texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/12",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "scross_12_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "13@debug_screen.cross_image": {
+          "$texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/13",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "scross_13_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "14@debug_screen.cross_image": {
+          "$texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/14",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "scross_14_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "15@debug_screen.cross_image": {
+          "$texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/15",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "scross_15_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "16@debug_screen.cross_image": {
+          "$texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/16",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "scross_16_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "17@debug_screen.cross_image": {
+          "$texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/17",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "scross_17_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "18@debug_screen.cross_image": {
+          "$texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/18",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "scross_18_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "19@debug_screen.cross_image": {
+          "$texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/19",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "scross_19_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "y@debug_screen.cross_image": {
+          "$texture": "textures/PFMAXLNX/theme/icon/hud/cross_hair/y",
+          "bindings":[
+            {
+              "binding_type": "view",
+              "source_control_name": "scross_y_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings":[
+      {
+        "binding_type": "view",
+        "source_control_name": "debug_screen.False_SCross",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

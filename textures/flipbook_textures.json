@@ -1,0 +1,14 @@
+[
+  {
+    "flipbook_texture": "textures/blocks/fire_0",
+    "atlas_tile": "fire_0",
+    "ticks_per_frame": 2,
+    "blend_frames": false
+  },
+  {
+    "flipbook_texture": "textures/blocks/fire_1",
+    "atlas_tile": "fire_1",
+    "ticks_per_frame": 2,
+    "blend_frames": false
+  }
+]

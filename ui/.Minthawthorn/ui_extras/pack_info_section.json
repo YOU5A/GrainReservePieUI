@@ -1,0 +1,373 @@
+{
+  "namespace": "info_section",
+
+  "info_card": {
+    "type": "image",
+    "texture": "textures/ui/Black",
+    "size": [ "100%", 50 ],
+    "alpha": 0.5,
+    "$icon_texture|default": "textures/PFMAXLNX/ui/icons/info_icon",
+    "$text_1|default": "Title Text",
+    "$text_2|default": "Desc Text",
+    "$text_3|default": "Info Text",
+    "$text_4|default": "Info2 Text",
+    "controls": [
+      {
+        "furry_background": {
+          "ignored": true,
+          "type": "image",
+          "texture": "textures/PFMAXLNX/images/Mintraspberry/Furry!",
+          "size": [ 60, 60 ],
+          "offset": [ "30%", 0 ],
+          "layer": 2,
+          "alpha": 0.4
+        }
+      },
+      {
+        "stack_panel_1": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", "100%" ],
+          "layer": 3,
+          "controls": [
+            {
+              "image_icon": {
+                "type": "image",
+                "size": [ 50, 50 ],
+                "texture": "$icon_texture"
+              }
+            },
+            {
+              "padding_1": {
+                "type": "panel",
+                "size": [ 2, 2 ]
+              }
+            },
+            {
+              "stack_panel_2": {
+                "type": "stack_panel",
+                "size": [ "fill", "fill" ],
+                "controls": [
+                  {
+                    "padding_top@common.empty_panel": {
+                      "size": [ 1.8, 1.8 ]
+                    }
+                  },
+                  {
+                    "label_1": {
+                      "type": "label",
+                      "layer": 1,
+                      "size": [ "100%", 15 ],
+                      "text": "$text_1",
+                      "font_scale_factor": 1.5,
+                      "font_type": "$rainbowpie_ui_theme_global_font_name",
+                      "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+                    }
+                  },
+                  {
+                    "label_2": {
+                      "type": "label",
+                      "layer": 1,
+                      "size": [ "100%", 10 ],
+                      "text": "$text_2",
+                      "font_type": "$rainbowpie_ui_theme_global_font_name",
+                      "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+                    }
+                  },
+                  {
+                    "label_3": {
+                      "type": "label",
+                      "layer": 1,
+                      "size": [ "100%", 10 ],
+                      "text": "$text_3",
+                      "font_type": "$rainbowpie_ui_theme_global_font_name",
+                      "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+                    }
+                  },
+                  {
+                    "label_4": {
+                      "type": "label",
+                      "layer": 1,
+                      "size": [ "100%", 10 ],
+                      "text": "$text_4",
+                      "font_type": "$rainbowpie_ui_theme_global_font_name",
+                      "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "pack_info_button@settings_common.section_toggle_base": {
+    "$toggle_view_binding_name": "pack_info_button_toggle",
+    "$glyph_texture": "",
+    "$glyph_color_texture": "",
+    "$glyph_size": [ 15, 15 ],
+    "$icon_group_name": "RainbowPie",
+    "$icon_texture_name": "about",
+    "$button_text": "options.pack_info",
+    "$toggle_property_bag": {
+      "#panel_title": "options.pack_info"
+    }
+  },
+
+  "pack_info_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "pack_info_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "just_a_panel": {
+          "type": "panel",
+          "size": [ "100%", 0 ],
+          "controls": [
+            {
+              "label_1": {
+                "type": "label",
+                "layer": 1,
+                "size": [ "100%", "default" ],
+                "offset": [ 0, -50 ],
+                "text": "人家也是有底线的！哼~",
+                "font_type": "$rainbowpie_ui_theme_global_font_name",
+                "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stack_panel_1": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 50 ],
+          "visible": "$mintui_other_config_ShowInSettings",
+          "controls": [
+            {
+              "image_icon": {
+                "type": "image",
+                "size": [ 50, 50 ],
+                "texture": "textures/MintUI/pack_icon"
+              }
+            },
+            {
+              "padding_1": {
+                "type": "panel",
+                "size": [ 2, 2 ]
+              }
+            },
+            {
+              "stack_panel_2": {
+                "type": "stack_panel",
+                "size": [ "fill", "fill" ],
+                "controls": [
+                  {
+                    "padding_top@common.empty_panel": {
+                      "size": [ 1.8, 1.8 ]
+                    }
+                  },
+                  {
+                    "label_1": {
+                      "type": "label",
+                      "layer": 1,
+                      "size": [ "100%", "default" ],
+                      "text": "($mintui_base_name + '')",
+                      "font_scale_factor": 1.5,
+                      "font_type": "$rainbowpie_ui_theme_global_font_name",
+                      "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+                    }
+                  },
+                  {
+                    "label_2": {
+                      "type": "label",
+                      "layer": 1,
+                      "size": [ "100%", "default" ],
+                      "text": "('Version - ' + $rainbowpieui_branch_type + '.' + $mintui_pack_version + '.' + $rainbowpieui_hotfix_version)",
+                      "font_type": "$rainbowpie_ui_theme_global_font_name",
+                      "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+                    }
+                  },
+                  {
+                    "label_3": {
+                      "type": "label",
+                      "layer": 1,
+                      "size": [ "100%", "default" ],
+                      "text": "('Branch - ' + $mintui_branch_name)",
+                      "font_type": "$rainbowpie_ui_theme_global_font_name",
+                      "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+                    }
+                  },
+                  {
+                    "label_4": {
+                      "type": "label",
+                      "layer": 1,
+                      "size": [ "100%", "default" ],
+                      "text": "Copyright @ 2023 RainbowPie Team. All rights reserved.",
+                      "font_type": "$rainbowpie_ui_theme_global_font_name",
+                      "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "changelog_padding_0": {
+          "type": "panel",
+          "size": [ 2, 2 ]
+        }
+      },
+      {
+        "changelog_background": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "size": [ "100%", "100%c + 4px" ],
+          "alpha": 0.3,
+          "layer": 1,
+          "controls": [
+            {
+              "stack_panel": {
+                "type": "stack_panel",
+                "size": [ "100% - 4px", "100%c" ],
+                "controls": [
+                  {
+                    "title_label": {
+                      "type": "label",
+                      "color": "$body_text_color",
+                      "size": [ "default", "default" ],
+                      "font_type": "$rainbowpie_ui_theme_global_font_name",
+                      "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name",
+                      "layer": 2,
+                      "text": "Updated Logs:"
+                    }
+                  },
+                  {
+                    "pack_update@pack_update.update": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_1_g": {
+          "type": "panel",
+          "size": [ 4, 4 ]
+        }
+      },
+      {
+        "label_1_g": {
+          "type": "label",
+          "layer": 1,
+          "size": [ "100%", "default" ],
+          "text": "Contact Us",
+          "font_scale_factor": 1.5,
+          "font_type": "$rainbowpie_ui_theme_global_font_name",
+          "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+        }
+      },
+      {
+        "info_card_group_2@info_section.info_card": {
+          "$icon_texture": "textures/PFMAXLNX/images/icon_1",
+          "$text_1": "Pigeon Society #1",
+          "$text_2": "§aThe resource pack is updated here§r",
+          "$text_3": "§eGrainReservePieUI§r",
+          "$text_4": "§bhttps://pd.qq.com/s/7o8q1yo8l"
+        }
+      },
+      {
+        "padding_g1i": {
+          "type": "panel",
+          "size": [ 6, 6 ]
+        }
+      },
+      {
+        "info_card_group_preview@info_section.info_card": {
+          "$icon_texture": "textures/PFMAXLNX/images/icon_2",
+          "$text_1": "Grain Reserve Pie Preview Feedback #2",
+          "$text_2": "§aResource kit information is updated here",
+          "$text_3": "§ePreview Exchange Feedback",
+          "$text_4": "§bQ - 230092690"
+        }
+      },
+      {
+        "padding_1": {
+          "type": "panel",
+          "size": [ 6, 6 ]
+        }
+      },
+      {
+        "label_1": {
+          "type": "label",
+          "layer": 1,
+          "size": [ "100%", "default" ],
+          "text": "Authors",
+          "font_scale_factor": 1.5,
+          "font_type": "$rainbowpie_ui_theme_global_font_name",
+          "backup_font_type": "$rainbowpie_ui_theme_global_font_backup_name"
+        }
+      },
+      {
+        "info_card_member_1@info_section.info_card": {
+          "$icon_texture": "textures/PFMAXLNX/images/MintHawthorn/icon",
+          "$text_1": "Minthawthorn/PFMAXLNX",
+          "$text_2": "§eAuthor§r",
+          "$text_3": "§eE-mail - yousa@easecation.net | pfmaxlnx@gmail.com",
+          "$text_4": "§bBilibili - PFMAXLNX"
+        }
+      },
+      {
+        "padding_1_title": {
+          "type": "panel",
+          "size": [ 6, 6 ]
+        }
+      },
+      {
+        "info_card_member_2@info_section.info_card": {
+          "$icon_texture": "textures/PFMAXLNX/images/Yumezen/icon",
+          "$text_1": "Yumezen",
+          "$text_2": "§ePigeon~§r",
+          "$text_3": "§eE-mail - yumezen@easecation.net",
+          "$text_4": "§bBilibili - Miru米若"
+        }
+      },
+    /*  {
+        "padding_3": {
+          "type": "panel",
+          "size": [ 6, 6 ]
+        }
+      },
+      {
+        "info_card_member_3@info_section.info_card": {
+          "$icon_texture": "textures/PFMAXLNX/images/Mintraspberry/icon",
+          "$text_1": "Mintraspberry",
+          "$text_2": "§eDesign & UI Code§r",
+          "$text_3": "§eE-mail - mintraspberryup@gmail.com",
+          "$text_4": "§bBilibili - Mintraspberry"
+        }
+      },*/
+      {
+        "padding_3_card": {
+          "type": "panel",
+          "size": [ 6, 6 ]
+        }
+      }
+    ]
+  }
+}

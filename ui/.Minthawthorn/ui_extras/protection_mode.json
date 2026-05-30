@@ -1,0 +1,120 @@
+{
+  "namespace":"hud",
+
+  "al_content": {
+    "ignored": "($mintui_pack_name = 'G' + 'r' + 'a' + 'i' + 'n' + ' ' + 'R' + 'e' + 's' + 'e' + 'r' + 'v' + 'e' + ' ' + 'P' + 'i' + 'e')",
+    "type": "panel",
+    "layer": 99999,
+    "controls": [
+      {
+        "common_panel@common.common_panel": {
+          "$show_close_button": false,
+          "size": [ "100% - 150px", "100% - 60px"],
+          "$dialog_background": "dialog_background_hollow_3"
+        }
+      },
+      {
+        "container": {
+          "type": "panel",
+          "size": [ "100% - 150px", "100% - 60px"],
+          "controls": [
+            { "dialog_content@hud.dialog_content": { } }
+          ]
+        }
+      }
+    ]
+  },
+
+  "dialog_content": {
+    "type": "panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "dialog_title_label@hud.dialog_title_label": { "offset": [ 0, 9 ] } },
+      { "content_area@hud.content_area": { } }
+    ]
+  },
+
+  "dialog_title_label": {
+    "type": "label",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "layer": 2,
+    "color": [ 0.275, 0.275, 0.275 ],
+    "text": "\u5ba2\u6237\u7aef\u53d8\u91cf\u9519\u8bef"
+  },
+
+  "content_area@common.modal_area_panel_base": {
+    "offset": [ "0px", "23px" ],
+    "size": [ "100% - 15px", "100% - 31px" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "layer": 1,
+    "$modal_binding_name": "#content_area_focused",
+    "controls": [
+      {
+        "content": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%" ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            {
+              "scrolling_panel@common.scrolling_panel": {
+                "size": [ "100%", "fill" ],
+                "$scrolling_content": "hud.content_panel",
+                "$show_background": false,
+                "$scroll_size": [ "5px", "100% - 4px" ],
+                "$scroll_bar_left_padding_size": [ 0, 0 ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "content_panel": {
+    "type": "stack_panel",
+    "size": [ "100%-10px", "100%c" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 5, 0 ],
+    "controls": [
+      {
+        "label_panel_1": {
+          "type": "panel",
+          "size": [ "100%", 18 ],
+          "controls": [
+            {
+              "label": {
+                "type": "label",
+                "text": "\u6211\u4eec\u68c0\u67e5\u5230\u8be5\u7248\u672c\u5df2\u7ecf\u88ab\u4fee\u6539\uff0c\u8bf7\u9605\u8bfb\u5305\u5185copyright.txt\u6587\u4ef6\u6765\u51b3\u5b9a\u662f\u5426\u5c06\u8be5\u7248\u672c\u53d1\u5e03\u3002\uff08\u672c\u63d0\u793a\u6bcf\u6b21\u542f\u52a8\u90fd\u4f1a\u663e\u793a\uff09",
+                "size": [ "100%", 8 ],
+                "color": [ 1, 1, 1 ],
+                "layer": 1
+              }
+            }
+          ]
+        }
+      },
+      {
+        "label_panel_2": {
+          "type": "panel",
+          "size": [ "100%", 18 ],
+          "controls": [
+            {
+              "label": {
+                "type": "label",
+                "text": "\u88ab\u4fee\u6539\u8fc7\u7684\u7248\u672c",
+                "size": [ "100%", 8 ],
+                "color": [ 1, 1, 1 ],
+                "layer": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
