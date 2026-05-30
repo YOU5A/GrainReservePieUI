@@ -6,8 +6,8 @@
 
 ### Minecraft 基岩版 · 现代化 UI 资源包
 
-[![Minecraft](https://img.shields.io/badge/Minecraft-Bedrock%201.1.0+-62B47A?logo=minecraft)](https://www.minecraft.net/)
-[![Version](https://img.shields.io/badge/version-1.1.0-blue)](https://github.com/YOU5A/GrainReservePieUI/releases)
+[![Minecraft](https://img.shields.io/badge/Minecraft-Bedrock%201.20+-62B47A?logo=minecraft)](https://www.minecraft.net/)
+[![Version](https://img.shields.io/badge/version-2.5.240524.HanaMaki-blue)](https://github.com/YOU5A/GrainReservePieUI/releases)
 [![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-red)](copyright.txt)
 [![Bilibili](https://img.shields.io/badge/bilibili-PFMAXLNX-00A1D6?logo=bilibili)](https://space.bilibili.com/353017137)
 
@@ -30,31 +30,10 @@
 ## 📦 安装
 
 1. 下载最新的 .mcpack 文件
-2. 双击文件导入 Minecraft
-3. 在「设置 → 全局资源」中激活 **GrainReserve Pie UI**
-4. 在设置中选择所需的子包（FPS 模块等）
-
----
-
-## 🧱 项目结构
-
-`	ext
-GrainReservePieUI/
-├── manifest.json          # 资源包清单
-├── pack_icon.png          # 资源包图标
-├── ui/                    # UI 定义 JSON
-│   ├── RainbowPieUI/      #   RainbowPie 核心框架
-│   ├── MintUI/            #   Mint 对话框组件
-│   ├── .Minthawthorn/     #   HUD 扩展
-│   └── netease/           #   网易版 UI
-├── textures/              # 贴图资源
-├── animations/            # 动画定义
-├── scripts/               # .ml 优化脚本
-├── subpacks/              # 子包（FPS / 资源包开关）
-├── models/                # 模型文件
-├── sounds/                # 音效
-└── fonts/                 # 字体
-`
+2. 如果是 7z 格式请修改后缀为 .mcpack
+3. 双击文件导入 Minecraft
+4. 在「设置 → 全局资源」中激活 **GrainReserve Pie UI**
+5. 在设置中选择所需的子包（FPS 模块等）
 
 ---
 
@@ -68,18 +47,11 @@ GrainReservePieUI/
 
 ---
 
-## 🎨 界面预览
-
-| 主界面 | 背包界面 | 设置界面 |
-|---|---|---|
-| ![主界面](textures/ui/panorama_0.png) | — | — |
-
----
-
 ## 👤 关于作者
 
 **PFMAXLNX** — 个人 Minecraft 内容创作者
 
+- 🌐 个人主页：[yousa.gamer.gd](https://yousa.gamer.gd)
 - 📧 Email：[pfmaxlnx@gmail.com](mailto:pfmaxlnx@gmail.com)
 - 📺 Bilibili：[PFMAXLNX](https://space.bilibili.com/353017137)
 
